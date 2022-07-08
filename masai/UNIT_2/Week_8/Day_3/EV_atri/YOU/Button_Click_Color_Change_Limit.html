@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+    <button>Click here to change my color!</button>
+    <script>
+        var counter = 0;
+
+        function random(number) {
+            return Math.floor(Math.random() * number) + 1;
+        }
+
+        function rand_color() {
+            return 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        }
+
+
+        function change_back() {
+
+            btn.style.backgroundColor = rand_color();
+            counter++;
+            console.log(counter);
+            if (counter == 2) {
+                btn.removeEventListener('click', change_back);
+            }
+        }
+        var btn = document.querySelector('button');
+
+        function change_size() {
+            var size = random(31);
+            btn.style.fontSize = size + "px";
+
+
+        }
+
+
+
+        btn.addEventListener('click', change_back);
+
+
+        btn.addEventListener('mouseover', change_size);
+    </script>
+</body>
+
+</html>

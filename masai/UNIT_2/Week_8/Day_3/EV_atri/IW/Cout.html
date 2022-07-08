@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: white;
+
+        }
+
+        button {
+            border: none;
+            padding: 10px;
+            margin: 20px;
+            color: white;
+            font-size: 30px;
+        }
+
+        .green-bg {
+            background-color: green;
+        }
+
+        .color2 {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>0</h1>
+    <button id="add">+</button>
+    <button id="subtract">-</button>
+    <script>
+        var counter = 0;
+        var add_btn = document.getElementById("add");
+        add_btn.setAttribute("class", "green-bg");
+        var rem_btn = document.getElementById("subtract");
+        rem_btn.setAttribute("class", "color2");
+
+
+        function increament() {
+            counter++;
+            document.querySelector("h1").textContent = counter;
+            document.querySelector("h1").setAttribute("class", "green-bg");
+            if (counter == 10) {
+                add_btn.removeEventListener('click', increament);
+            }
+
+        }
+
+        function decreament() {
+            counter--;
+            document.querySelector("h1").textContent = counter;
+            document.querySelector("h1").setAttribute("class", "color2");
+            if (counter == 0) {
+                rem_btn.removeEventListener('click', decreament);
+            }
+        }
+
+        function hello() {
+            console.log("HEllo");
+
+
+        }
+
+        add_btn.addEventListener('click', hello);
+        add_btn.addEventListener('click', increament);
+        rem_btn.addEventListener('dblclick', decreament);
+    </script>
+
+</body>
+
+</html>

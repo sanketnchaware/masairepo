@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(2, 25% 75%);
+    grid-gap: 2rem;
+}
+
+#News_div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+#News_div div {
+    flex: 1;
+}
+
+#News_div * {
+    margin: 0 0.2rem;
+}
+
+
+img {
+    width: 100%;
+}

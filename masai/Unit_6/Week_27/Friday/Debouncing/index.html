@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #movies {
+            width: 150px;
+            height: 30vh;
+            overflow: scroll;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Debouncing</h1>
+    <input type="text" oninput="debounce(main,1000)" placeholder="Search" id="query">
+    <div id="movies"></div>
+</body>
+
+</html>
+
+<!-- http://www.omdbapi.com/?s=${name}&apikey=fdaea930 -->
+
+<script>
+    let moviesDiv = document.getElementById('movies');
+    var timerId;
+
+    async function searchMovies(name) {
+
+        console.log(name);
+        let res = await fetch(`https://www.omdbapi.com/?s=${name}&apikey=fdaea930`);
+        let data = await res.json();
+        return data.Search;
+
+    }
+
+
+    function AppendMovies(m) {
+        moviesDiv.innerHTML = null;
+        m.forEach(({
+            Title
+        }) => {
+            let p = document.createElement("p");
+            p.innerText = Title;
+            moviesDiv.append(p);
+        })
+    }
+
+    async function main() {
+        let name = document.getElementById('query').value;
+
+        if (name.length < 3) {
+            return false;
+        }
+        let movies = await searchMovies(name);
+        if (movies === undefined) {
+            return false;
+        }
+        AppendMovies(movies);
+        console.log('movies:', movies)
+    }
+
+
+    function debounce(func, delay) {
+        let name = document.getElementById('query').value;
+
+        
+
+        if (name.length < 3) {
+            moviesDiv.innerHTML = null;
+            return false;
+        }
+        if (timerId) {
+            clearTimeout(timerId);
+        }
+        timerId = setTimeout(() => {
+            func()
+        }, delay)
+    }
+</script>

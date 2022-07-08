@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  border: 1px solid #ccc;
+}
+
+
+
+.mode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+
+  background-color: #f2f;
+  border-radius: 10px;
+  border: 1px solid red;
+  padding: 1rem;
+
+
+
+}
+
+.mode * {
+  font-size: 1.5em;
+  color: aquamarine;
+  background-color: black;
+  padding: 0.5rem;
+  border-bottom: 1px solid red;
+
+
+
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #strike{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label>Task</label>
+        <input type="text" id="taskname">
+        <button onclick="AddTask()">Submit</button>
+        <h1 id="counter">Counter</h1>
+
+    </div>
+
+
+    <script>
+        function CreateTask(n, id) {
+            this.name = n;
+            this.status = "False";
+            this.id = id;
+        }
+
+        var count = 0;
+
+        function AddTask() {
+
+            count++;
+            var input_value = document.getElementById("taskname").value;
+            var new_task = new CreateTask(input_value, count);
+
+            var div = document.createElement("div");
+            var h1 = document.createElement("h1");
+            h1.textContent = new_task.name;
+            var p = document.createElement("button");
+            p.textContent = new_task.status;
+            p.setAttribute("id", count);
+            p.addEventListener("click", ToggleTask);
+            var button = document.createElement("button");
+            button.textContent = "delete";
+            button.setAttribute("id", count);
+            button.addEventListener("click", removeTask);
+           
+
+           
+
+
+
+            var counter = document.getElementById('counter');
+            counter.textContent = count;
+            div.append(h1, p, button,status);
+            document.body.append(div);
+
+            document.getElementById("taskname").value = "";
+
+
+
+
+        }
+
+        function ToggleTask(event) {
+            console.log(event.target.id);
+            var element = document.getElementById(event.target.id);
+            if (element.textContent === "False") {
+                element.textContent = "True";
+            } else {
+                element.textContent = "False";
+            }
+        }
+
+
+        function removeTask(event) {
+            count--;
+            var parent = document.getElementById(event.target.id);
+            var item = parent.parentNode;
+            item.remove();
+            var dec_counter = document.getElementById('counter');
+            dec_counter.textContent = count;
+        }
+    </script>
+</body>
+
+</html>

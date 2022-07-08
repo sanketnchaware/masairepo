@@ -1,0 +1,80 @@
+❗14 Important Patterns to Ace Any Coding Interview Question
+
+Sliding Window
+2 Pointers or Iterators
+Fast and Slow Pointers or Iterators
+Merge Intervals
+Cyclic sort
+In-place reversal of linked list
+Tree BFS
+Tree DFS
+Two heaps
+Subsets
+Modified binary search
+Top K elements
+K-way merge
+Topological sort
+
+
+
+
+UNIT 3:-
+	1.Two Pointer Approach
+    2.Sliding Window
+    3.Bubble Sort & Selection Sort
+    4.Stacks Data Structures
+    5.Application of Stacks
+    6.Introduction to queue
+
+https://oj.masaischool.com/contest/1724
+1.Stock it up                           (done)                      
+2.Help Elevator                         (done)        
+3.Alternate Palindrome                      
+
+https://oj.masaischool.com/contest/1788/problems
+1.Two sum                               (done)
+2.Detect Palindrome                     (done)
+
+https://oj.masaischool.com/contest/1795/problems
+1.Subarray and Sum
+2.Count such pairs                      (done)               
+
+https://oj.masaischool.com/contest/1806/problems
+1.Subarray under condition
+
+https://oj.masaischool.com/contest/1840/problems
+1.Bubble Sort Problem
+2.Selection Sort Problem
+
+https://oj.masaischool.com/contest/1832/problems ( Week 11_Evaluation)
+1.Pair less than K 
+2.Take out maximum
+3.Is it palindromic
+
+
+https://oj.masaischool.com/contest/1854/problems
+1.New Sorting Algorithm()
+2.Make Leaderboard
+
+https://oj.masaischool.com/contest/1857/problems
+1.Push, Pop and Top
+2.Reduce String
+
+https://oj.masaischool.com/contest/1876/problems
+1.Smaller Neighbour Element
+
+https://oj.masaischool.com/contest/1901/problems
+1.Masai Restaurant
+2.Signal's Capacity
+
+https://oj.masaischool.com/contest/1905/problems
+1.Buy ticket
+2.New Year Celebration
+
+https://oj.masaischool.com/contest/1916/problems
+1.Masai Coding Competition
+2.Again a classical problem
+
+https://oj.masaischool.com/contest/1926/problems
+1.Implement Queue using Stack
+2.Implement Stack using Queue

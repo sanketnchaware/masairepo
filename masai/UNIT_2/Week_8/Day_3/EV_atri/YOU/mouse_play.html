@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>mouse_play</title>
+    <style>
+        #container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: teal;
+            border-radius: 10px;
+            height: 400px;
+        }
+
+        #sbmit_btn {
+            font-size: 2rem;
+            background-color: red;
+            padding: 20px;
+            margin: 250px;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <input id="sbmit_btn" value="submit">
+    </div>
+
+
+    <script>
+        function change_clr() {
+
+            document.getElementById('sbmit_btn').style.background = "yellow";
+
+        }
+
+        function change_original() {
+            document.getElementById('sbmit_btn').style.background = "red";
+
+        }
+
+
+
+        var item = document.getElementById("container");
+        item.addEventListener("mouseover", change_clr);
+        item.addEventListener("mouseleave", change_original);
+    </script>
+</body>
+
+</html>

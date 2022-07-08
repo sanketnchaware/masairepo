@@ -1,0 +1,27 @@
+* {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 40%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.Search_div {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.search-box {
+  width: 100%;
+}
+
+.logos {
+  padding: 0.2rem;
+  width: 25px;
+}

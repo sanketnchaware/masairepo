@@ -1,0 +1,50 @@
+<!-- Create a form.html. create a form there that will allow the user to create new products and add them to local storage.
+Each product should have a name, price, image. Each new product will be added to the array of products present in local storage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>E-commerce -1</title>
+</head>
+
+<body>
+    <form onsubmit="submitForm(event)">
+        <input placeholder="Enter Name" id="name" type="text">
+        <br>
+        <input placeholder="Enter Price" id="price" type="number">
+        <br>
+        <input placeholder="Enter image URL" id="image_link" type="url">
+        <br>
+        <input  type="submit">
+    </form>
+
+
+    <script>
+        var info_arr = [];
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            const info_object = {
+                name: document.getElementById("name").value,
+                price: document.getElementById("price").value,
+                link:document.getElementById("image_link").value,
+                
+            }
+
+
+            info_arr.push(info_object);
+            info_arr_json = JSON.stringify(info_arr);
+
+
+            localStorage.setItem("Out_array", info_arr_json);
+
+
+
+        }
+    </script>
+</body>
+
+</html>

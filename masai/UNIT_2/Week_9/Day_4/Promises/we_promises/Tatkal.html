@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatakal booking system</title>
+</head>
+
+<body>
+    <h1>Tatkal booking system</h1>
+
+
+    <button onclick="check()">Check availability</button>
+
+
+
+    <script>
+        let BtoG = ["kaka", "dada", "mama", "tatya", "atya", "akka"];
+        let MtoG = ["kaka", "dada", "mama", "tatya", "atya", "akka"];
+        let PtoG = ["kaka", "dada", "mama", "tatya", "atya", "akka"];
+
+
+
+        var Booking = [
+            "Haider",
+            "Iron Man",
+            "Sidtalk",
+            "Carry",
+            "BB ki vines",
+            "mother dairy"
+        ];
+
+
+
+        function check() {
+            var promise = new Promise(function (resolve, reject) {
+                setInterval(function () {
+                    if (BtoG.length < 2) {
+                        resolve(
+                            `BtoG is available and MtoG have ${MtoG.length} passengers and PtoG have ${PtoG.length} passengers `
+                        );
+
+                    } else if (MtoG.length < 2) {
+                        resolve(
+                            `MtoG is available and BtoG have ${BtoG.length} passengers and PtoG have ${PtoG.length} passengers `
+                        );
+                    } else if (PtoG.length < 2) {
+                        resolve(
+                            `PtoG is available and MtoG have ${MtoG.length} passengers and BtoG have ${BtoG.length} passengers `
+                        );
+                    }
+                }, 2000);
+            });
+
+
+            promise.then(function (res) {
+                console.log(res);
+
+                // window.location.href = "booking.html";
+
+
+                clearInterval(interval);
+                clearInterval(interval2);
+
+
+            })
+        }
+
+        function cancelTicket() {
+            let c1 = Math.round(Math.random() * 5);
+            let c2 = Math.round(Math.random() * 5);
+            let c3 = Math.round(Math.random() * 5);
+
+
+            setTimeout(function () {
+                BtoG.pop();
+                // console.log('BtoG:', BtoG)
+            }, c1 * 1000);
+
+            setTimeout(function () {
+                MtoG.pop();
+                // console.log('MtoG:', MtoG)
+            }, c2 * 1000);
+
+            setTimeout(function () {
+                PtoG.pop();
+                // console.log('PtoG:', MtoG)
+            }, c3 * 1000);
+
+
+        }
+
+        let interval2 = setInterval(BookTicket, 5000);
+        var interval = setInterval(cancelTicket, 1000);
+
+
+
+        function BookTicket() {
+            var b1 = Math.round(Math.random() * 5);
+            var b2 = Math.round(Math.random() * 5);
+            var b3 = Math.round(Math.random() * 5);
+
+            setTimeout(function () {
+                BtoG.push(Booking[b1]);
+                // console.log('BtoG:', BtoG)
+            }, b1 * 1000);
+
+            setTimeout(function () {
+                MtoG.push(Booking[b2]);
+                // console.log('MtoG:', MtoG)
+            }, b2 * 1000);
+
+
+            setTimeout(function () {
+                PtoG.push(Booking[b3]);
+                // console.log('PtoG:', PtoG)
+            }, b3 * 1000);
+
+        }
+    </script>
+</body>
+
+</html>

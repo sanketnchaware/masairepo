@@ -1,0 +1,1 @@
+ arr[0] + P_sum(arr.slice(1));

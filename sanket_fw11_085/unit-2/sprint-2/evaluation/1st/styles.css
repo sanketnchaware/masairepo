@@ -1,0 +1,138 @@
+#container{
+    width: 900px;
+    margin: auto;
+  
+}
+.cont-1{
+    display:flex;
+    justify-content: center;
+    align-items: space-between; 
+    background-color:#E8F6EF;
+  
+}
+.s1,.s2,.s3{
+    margin: 20px;
+    width:250px;
+    height: 80px;
+    border-radius: 8px;
+    display:flex;
+    
+    
+}
+
+.cont-1 p{
+    
+    color: white;
+  
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    
+    margin:20px 10px;
+   
+    
+}
+
+.s1{
+    background-color:#FFD523;
+}
+.s2{
+    background-color:#7C83FD;
+}
+.s3{
+    background-color:#7DEDFF;
+}
+.cont-1 img{
+width: 50px;
+height: 50px;
+margin:15px 20px;
+border-radius: 50px;
+
+}
+
+.cont-2 >h1{
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 36px;
+}
+
+.cont-3{
+    width: 500px;
+    margin: auto;
+    
+
+}
+.cont-3  div{
+    float: left;
+    
+    padding: 10px 15px;
+    
+    border-radius:4px;
+    
+}
+.backlit-grey{
+    background-color:#E8F0F2;
+}
+.backlit-green{
+    background-color:#A2DBFA;
+}
+.tabs p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin:0;
+}
+
+.cont-4{
+   
+    margin-top:50px;
+    
+}
+.cont-4 div{
+    float: left;
+    margin: 15px;
+
+    
+}
+
+.cont-4 img {
+ width: 270px;
+ height: 200px;  
+ border-radius: 6px;
+
+}
+.clear{
+    clear: both;
+}
+.cont-4  div p{
+    text-align: left;
+    margin:  10px 12px;
+
+
+
+}
+.Branch{
+    font-weight: bolder; 
+    font-size: 20px;
+    font-family: 'Abril Fatface', cursive;
+}
+.sentence{
+    color: darkgrey;
+}
+.vert-boxes{
+    background-color: #E8F0F2;
+    
+}
+.agri{
+    font-family: 'Open Sans', sans-serif;
+}
+
+button{
+    width:150px;
+    margin: 0 2px;
+    height:40px;
+    border-radius: 8px;
+    border:2px solid #39A2DB;
+}
+button a{
+    text-decoration:none;
+    color:  #39A2DB;
+}

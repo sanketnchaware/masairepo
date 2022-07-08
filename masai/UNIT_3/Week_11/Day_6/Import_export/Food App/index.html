@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index2</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        * {
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+
+        #Search_div {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 1rem;
+        }
+
+        #Search_div * {
+            margin: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+
+</html>
+
+
+<script type="module">
+    import navbar from "./components/navbar.js";
+  import  {append,getData} from "./scripts/showData.js";
+  document.body.innerHTML = navbar();
+
+  let div = document.createElement("div");
+  div.setAttribute("id", "Search_div");
+  div.innerHTML = `<div>
+                        <label>Search Receipe by Name</label>
+                     <input id="Intput"  type="text">
+                     <br>
+                     </div>
+                    `;
+
+
+
+
+setTimeout(function(){
+    let intake=document.getElementById("Intput");
+    intake.setAttribute("oninput","GetMeal()");
+},2000)
+
+
+  document.body.append(div);
+  let content_div=document.createElement("div");
+  content_div.setAttribute("id", "content");
+  document.body.append(content_div);
+
+
+async function GetMeal(){
+    
+  
+    let place=document.getElementById("content"); 
+    let item=document.getElementById("Intput").value;
+    let res=await getData(`https://www.themealdb.com/api/json/v1/1/search.php?s=${item}`)
+ 
+   
+
+    
+    if(!res.meals){
+        alert("Receipe not available, please search for another item");
+        return false;
+    }
+    append(res.meals,place);
+
+}
+
+
+
+  
+
+
+
+
+
+ 
+</script>

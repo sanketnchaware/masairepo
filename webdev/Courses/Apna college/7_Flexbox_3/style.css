@@ -1,0 +1,43 @@
+*{
+padding: 0;
+margin: 0;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.c1{
+    background-color: rgba(139, 212, 214, 0.479);
+    width: 15%;
+    height: 100vh;
+    padding: 10px;
+}
+.c2{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+  
+}
+
+.r1{
+    background-color: darkkhaki;
+    width: 70rem;
+    height: 20vh;
+   
+}
+.r2{
+    background-color: white;
+    width: 70rem;
+    height: 60vh;
+    
+   
+}
+
+.r3{
+    background-color:darksalmon;
+    width: 70rem;
+    height: 20vh;
+    
+}

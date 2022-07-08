@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min_JS_Datatype</title>
+</head>
+
+<body>
+
+    <button id="b1">Objects</button><br>
+
+    <button id="b2">Arrays</button><br>
+
+    <button id="b3">Functions</button><br>
+
+    <button id="b4">Strings</button><br>
+
+    <button id="b5">Number</button><br>
+
+    <button id="b6">null</button><br>
+
+    <button id="b7">undefined</button>
+
+
+
+
+    <script>
+        function change_clr() {
+            obj_btn.style.backgroundColor = "red";
+
+            var ul1 = document.createElement("ul");
+            var l1 = document.createElement("li");
+            l1.textContent = "Object is primitive data type.";
+            ul1.appendChild(l1);
+
+            var l2 = document.createElement("li");
+            l2.textContent = "Object stores data in key value pair format.";
+            ul1.appendChild(l2);
+
+            var l3 = document.createElement("li");
+            l3.textContent = "Object is mutable.";
+            ul1.appendChild(l3);
+
+            var l4 = document.createElement("li");
+            l4.textContent = "Object holds the adress of the data as it is call by reference data type. ";
+            ul1.appendChild(l4);
+
+            var l5 = document.createElement("li");
+            l5.textContent = "Empty object is said to be null. ";
+            ul1.appendChild(l5);
+
+            var btn2 = document.getElementById('b2');
+
+            var bodyElem = document.querySelector('body');
+            bodyElem.insertBefore(ul1, btn2);
+        }
+
+        function add_arr() {
+
+            arr_btn.style.backgroundColor = "yellow";
+
+            var ul1 = document.createElement("ul");
+            var l1 = document.createElement("li");
+            l1.textContent = "Array is primitive data type.";
+            ul1.appendChild(l1);
+
+            var l2 = document.createElement("li");
+            l2.textContent = "Array stores data in list format.";
+            ul1.appendChild(l2);
+
+            var l3 = document.createElement("li");
+            l3.textContent = "Array is mutable.";
+            ul1.appendChild(l3);
+
+            var l4 = document.createElement("li");
+            l4.textContent = "Array holds the address of the data as it is call by reference data type. ";
+            ul1.appendChild(l4);
+
+            var l5 = document.createElement("li");
+            l5.textContent = "Array can consist of number, string, array and object.";
+            ul1.appendChild(l5);
+
+
+            var btn3 = document.getElementById('b3');
+
+            var bodyElem = document.querySelector('body');
+            bodyElem.insertBefore(ul1, btn3);
+
+
+        }
+
+
+        function add_fun() {
+            fun_btn.style.backgroundColor = "teal";
+
+            var ul1 = document.createElement("ul");
+            var l1 = document.createElement("li");
+            l1.textContent = "Function is primitive data type.";
+            ul1.appendChild(l1);
+
+            var l2 = document.createElement("li");
+            l2.textContent = "Without calling function it is not executed.";
+            ul1.appendChild(l2);
+
+            var l3 = document.createElement("li");
+            l3.textContent = "Function is executed in call stack";
+            ul1.appendChild(l3);
+
+            var l4 = document.createElement("li");
+            l4.textContent = "Funtion is an object. ";
+            ul1.appendChild(l4);
+
+            var l5 = document.createElement("li");
+            l5.textContent = "Function is used to segrigate the problem into small parts. ";
+            ul1.appendChild(l5);
+
+            var btn4 = document.getElementById('b4');
+
+            var bodyElem = document.querySelector('body');
+            bodyElem.insertBefore(ul1, btn4);
+
+
+        }
+
+
+        function add_str() {
+            str_btn.style.backgroundColor = "pink";
+
+            var ul1 = document.createElement("ul");
+            var l1 = document.createElement("li");
+            l1.textContent = "String is primitive data type";
+            ul1.appendChild(l1);
+
+            var l2 = document.createElement("li");
+            l2.textContent = "Strings are useful for holding data that can be represented in text form.  ";
+            ul1.appendChild(l2);
+
+            var l3 = document.createElement("li");
+            l3.textContent = "String is immutable.";
+            ul1.appendChild(l3);
+
+            var l4 = document.createElement("li");
+            l4.textContent = "String hold the actual value of data. ";
+            ul1.appendChild(l4);
+
+
+
+
+            var btn5 = document.getElementById('b5');
+
+            var bodyElem = document.querySelector('body');
+            bodyElem.insertBefore(ul1, btn5);
+
+
+        }
+
+        function add_num() {
+            num_btn.style.backgroundColor = "orange";
+
+            var ul1 = document.createElement("ul");
+            var l1 = document.createElement("li");
+            l1.textContent = "Number is primitive data type.";
+            ul1.appendChild(l1);
+
+            var l2 = document.createElement("li");
+            l2.textContent = "Number can vary from any number to any number";
+            ul1.appendChild(l2);
+
+            var l3 = document.createElement("li");
+            l3.textContent = "Number can be ressigned to the variable it is of mutable data type";
+            ul1.appendChild(l3);
+
+            var l4 = document.createElement("li");
+            l4.textContent = "Number can hold the value of integer value or decimal value. ";
+            ul1.appendChild(l4);
+
+
+
+
+            var btn6 = document.getElementById('b6');
+
+            var bodyElem = document.querySelector('body');
+            bodyElem.insertBefore(ul1, btn6);
+
+
+        }
+
+        function add_null() {
+            null_btn.style.backgroundColor = "blue";
+
+            var ul1 = document.createElement("ul");
+            var l1 = document.createElement("li");
+            l1.textContent = "Null is primitive data type.";
+            ul1.appendChild(l1);
+
+            var l2 = document.createElement("li");
+            l2.textContent = "Empty object is said to be null";
+            ul1.appendChild(l2);
+
+            var l3 = document.createElement("li");
+            l3.textContent = "Null means empty value";
+            ul1.appendChild(l3);
+
+            var l4 = document.createElement("li");
+            l4.textContent = "Null is value";
+            ul1.appendChild(l4);
+
+            var l5 = document.createElement("li");
+            l5.textContent = "Null means assigning an empty value.";
+            ul1.appendChild(l5);
+
+
+            var btn7 = document.getElementById('b7');
+
+            var bodyElem = document.querySelector('body');
+            bodyElem.insertBefore(ul1, btn7);
+
+
+        }
+
+        function add_und() {
+
+            und_btn.style.backgroundColor = "grey";
+
+            var ul1 = document.createElement("ul");
+            var l1 = document.createElement("li");
+            l1.textContent = "Undefined is primitive data type.";
+            ul1.appendChild(l1);
+
+            var l2 = document.createElement("li");
+            l2.textContent = "Undefined means when the value is not assigned.";
+            ul1.appendChild(l2);
+
+            var l3 = document.createElement("li");
+            l3.textContent = "If we console the variable without assign the value, it will give output as indefined.";
+            ul1.appendChild(l3);
+
+
+
+            var bodyElem = document.querySelector('body');
+
+
+            bodyElem.appendChild(ul1);
+        }
+
+
+
+
+
+
+        var obj_btn = document.getElementById('b1');
+        obj_btn.addEventListener('click', change_clr);
+
+
+        var arr_btn = document.getElementById('b2');
+        arr_btn.addEventListener('click', add_arr);
+
+        var fun_btn = document.getElementById('b3');
+        fun_btn.addEventListener('click', add_fun);
+
+        var str_btn = document.getElementById('b4');
+        str_btn.addEventListener('click', add_str);
+
+
+        var num_btn = document.getElementById('b5');
+        num_btn.addEventListener('click', add_num);
+
+        var null_btn = document.getElementById('b6');
+        null_btn.addEventListener('click', add_null);
+
+        var und_btn = document.getElementById('b7');
+        und_btn.addEventListener('click', add_und);
+    </script>
+
+
+</body>
+
+</html>
+<!-- 
+Problem
+Create a mini Js datatype learning app. Create buttons namely ‘Objects’, ‘Arrays’, ‘Functions’, ‘Strings’, ‘Numbers’, ‘null’, ‘undefined’ in index.html. On clicking any respective button, the user should be able to see 5-6 bullet-point information about that particular datatype. For e.g If I click on ‘Object’, I should see information about Js objects like what are objects, how they work, mutability, etc. Be creative! -->

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 22px;
+            font-weight: bold;
+            color: #0F52BA;
+
+        }
+
+        #counter,
+        #time {
+            display: inline-block;
+
+        }
+
+        .strike {
+            text-decoration: line-through;
+        }
+
+        #container {
+            width: 65%;
+            margin: auto;
+            background-color: #ffe359;
+            height: 100vh;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1rem double #0F52BA;
+
+        }
+
+        form {
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid lightgoldenrodyellow;
+
+        }
+
+        table,
+        td {
+            border-spacing: 0.5rem;
+            border: 2px solid lightgoldenrodyellow;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div id="container">
+        <h1>To Do List</h1>
+        <form>
+            <label>Enter Task:-</label>
+            <input id="task_name" type="text">
+            <input type="submit">
+            <div id="counter">0</div>
+
+        </form>
+
+
+        <table>
+            <tr>
+                <td>Task Name</td>
+                <td>Toggle Status</td>
+                <td>Mark As Completed</td>
+                <td>Delete</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+    <script>
+        function createTask(n) {
+            this.name = n;
+            this.complete = "Done";
+            this.delete = "Remove";
+            this.status = "False";
+        }
+
+        var count = 0;
+
+        function add_data(event) {
+
+            
+            event.preventDefault();
+            var Task = document.getElementById("task_name").value;
+            console.log(Task);
+            var item = new createTask(Task);
+            console.log(item);
+
+            var table = document.querySelector("table");
+            console.log(table);
+            if (!Task) {
+                alert("Fill the input fields")
+            } else {
+
+                count++;
+                var tr = document.createElement("tr");
+                var d1 = document.createElement("td");
+                d1.textContent = item.name;
+
+                var d4 = document.createElement("td");
+                d4.textContent = item.status;
+                d4.addEventListener("click", change_status)
+                d4.setAttribute("id", count);
+
+
+                var d2 = document.createElement("td");
+                d2.textContent = item.complete;
+                d2.setAttribute("id", count);
+                d2.addEventListener("click", done); //for done button row//
+
+
+                var d3 = document.createElement("td");
+                d3.textContent = item.delete;
+                d3.setAttribute("id", count);
+
+                d3.addEventListener("click", remove); //for remove button row//
+
+                tr.append(d1, d4, d2, d3);
+                table.append(tr);
+
+
+
+
+
+            }
+
+
+
+            var counter = document.getElementById("counter");
+            counter.textContent = count;
+            document.getElementById("task_name").value = "";
+
+
+        }
+
+
+        function change_status(event) {
+            let toggle = event.target;
+            if (toggle.textContent == "False") {
+                toggle.textContent = "True";
+            } else {
+                toggle.textContent = "False";
+            }
+        }
+
+
+        function done(event) {
+            var parent = event.target.parentNode;
+            parent.style.background = "green";
+            parent.childNodes[0].setAttribute("class", "strike");
+            parent.childNodes[1].setAttribute("class", "strike");
+
+
+        }
+
+        function remove(event) {
+            count--;
+            var parent = event.target.parentNode;
+            parent.remove();
+            var counter = document.getElementById("counter");
+            counter.textContent = count;
+
+        }
+
+
+        var form = document.querySelector("form");
+        form.addEventListener("submit", add_data);
+    </script>
+</body>
+
+</html>

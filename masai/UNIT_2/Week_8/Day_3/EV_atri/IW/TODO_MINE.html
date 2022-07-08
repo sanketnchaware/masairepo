@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>TODO</title>
+    <style>
+        #container {
+
+            width: 50%;
+            margin: 0 auto;
+            padding: 100px;
+
+        }
+
+        #input-container {
+            background-color: teal;
+            padding: 10px;
+        }
+
+        label {
+            color: white;
+            font-weight: bolder;
+        }
+
+        input {
+            margin: 10px 20px;
+        }
+
+        #sbmit {
+            width: 50%;
+            margin: 0 160px;
+            height: 40px;
+            background-color: crimson;
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 20px;
+            font-weight: bolder;
+        }
+
+        #table-container {
+            background-color: hotpink;
+         
+
+        }
+
+        table {
+            width: 100%;
+            border: 2px solid darkblue;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="input-container">
+            <form>
+                <label>Name:-</label>
+                <input id="name" placeholder="Full Name" type="text">
+                <label>Time:-</label>
+                <input id="time" type="time">
+                <label>Preference:-</label>
+                <select id="preference">
+                    <option value="">Select</option>>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <br>
+                <input id="sbmit" type="submit">
+            </form>
+        </div>
+        <hr>
+        <div id="table-container">
+            <table>
+                <tr>
+                    <td>Task</td>
+                    <td>Time</td>
+                    <td>Preference</td>
+                    <td>Click to Mark as Complete</td>
+                    <td>Click to Delete</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script>
+        var add_data = function (event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var time = document.getElementById("time").value;
+            var preference = document.getElementById("preference").value;
+            if(!name || !time || !preference ){
+                alert("Fill the input fields")
+            }
+            else{
+                create_items(name, time, preference);
+            }
+
+        
+
+        }
+
+
+            function complete(event){
+                var parent=event.target.parentNode;
+            console.log(parent);
+            parent.style.backgroundColor ="green";
+            }
+
+            function remove(event){
+                var parent=event.target.parentNode;
+                alert("Do you want to remove?");
+                parent.remove();
+            }
+
+         function create_items(name, time, preference){
+           var parent=document.querySelector("table");
+           var row=document.createElement("tr");
+
+           var c1=document.createElement("td");
+           c1.textContent=name;
+
+           var c2= document.createElement("td");
+           c2.textContent=time;
+
+           var c3=document.createElement("td");
+           c3.textContent=preference;
+
+           var c4=document.createElement("td");
+           c4.textContent="Complete";
+           c4.addEventListener('click',complete);
+
+           var c5=document.createElement("td");
+           c5.textContent="Delete";
+           c5.addEventListener('click',remove);
+
+           
+
+           row.appendChild(c1);
+           row.appendChild(c2);
+           row.appendChild(c3);
+           row.appendChild(c4);
+           row.appendChild(c5);
+
+           parent.appendChild(row);
+
+          
+
+
+        }
+
+
+        var form = document.querySelector("form");
+        form.addEventListener("submit", add_data);
+    </script>
+</body>
+
+</html>

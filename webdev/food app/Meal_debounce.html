@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>debouncing</title>
+    <style>
+        * {
+            text-align: center;
+            margin: 1rem auto;
+        }
+
+        input {
+            width: 200px;
+        }
+
+        #movies {
+            height: 200px;
+            width: 206px;
+            border: 1px solid black;
+            border-top: none;
+            overflow: scroll;
+
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" oninput="debounce(main,1000)" id="query" />
+
+    <div id="movies"></div>
+
+
+    <script>
+        let movies_div = document.getElementById("movies");
+        var TimerId;
+        async function searchMovies(m) {
+            let res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${m}`)
+            let data = await res.json();
+            return data.meals;
+
+        }
+
+
+
+        function appendMovies(mov) {
+            movies_div.innerText = null;
+            mov.forEach(({
+                strMeal
+            }) => {
+                let p_name = document.createElement("p");
+                p_name.textContent = strMeal;
+                movies_div.append(p_name);
+
+            })
+        }
+
+        async function main() {
+            let name = document.getElementById("query").value;
+            let movies = await searchMovies(name);
+
+
+            if (movies === undefined) {
+                return false;
+            }
+            appendMovies(movies)
+        }
+
+
+        function debounce(funx, delay) {
+
+
+            let name = document.getElementById("query").value;
+            if (name.length < 3) {
+                return false;
+            }
+
+            if (TimerId) {
+                clearTimeout(TimerId)
+            }
+
+
+            TimerId = setTimeout(() => {
+                funx()
+            }, delay)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        img {
+            width: 10rem;
+            height: 10rem;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 2%;
+        }
+        #container div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Price</h1>
+    <h2>cart</h2>
+    <button onclick="makePayment()">Make Payment</button>
+    <div id="container"></div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    var count=0;
+    var total=0
+    var cart_data = JSON.parse(localStorage.getItem("cart"));
+
+    cart_data.forEach(function (product) {
+        count++;
+        console.log('product:', product)
+
+        var div = document.createElement('div');
+
+        let p_name = document.createElement('p');
+        p_name.innerHTML = product.name;
+        let p_price = document.createElement('p');
+        p_price.innerHTML = product.price;
+        let img = document.createElement('img');
+        img.src = product.image;
+        let counter=document.createElement('h1');
+        counter.textContent=count;
+        var moj=document.querySelector("h2");
+        moj.textContent=`Count = ${count}`;
+        div.append(img, p_name, p_price);
+        var parent = document.getElementById("container");
+        parent.append(div);
+
+        total=total+Number(product.price);
+        document.querySelector("h1").textContent=`Total = ${total}`;
+       
+    });
+
+    function makePayment(){
+        setTimeout(function(){
+            alert("Payment Successfull");
+        },4000)
+    }
+</script>

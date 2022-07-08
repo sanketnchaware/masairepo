@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #8c8d94;
+
+}
+
+/* First nav in header start */
+
+#nav-1 {
+    margin-top:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(230, 228, 228);
+    font-weight: bold;
+    font-size: 0.8rem;
+    
+
+
+
+}
+
+
+.logo-div {
+    width: 27%;
+}
+
+.logo-div img {
+    width: 25%;
+}
+
+.account-logo {
+    width: 20%;
+}
+
+.account-logo img {
+    width: 100%;
+}
+
+.login_div {
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+
+}
+
+/* First nav in header start */
+
+
+/* Second nav of header start */
+
+#nav-2 {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px 0px 1px grey;
+   
+
+}
+
+#nav-2 div {
+    display: flex;
+    flex-basis: 48%;
+    justify-content: center;
+    padding-left: 5rem;
+   
+
+}
+
+.menu-items div:first-child {
+    color: #fc2779;
+
+}
+
+/* second nav in header end */
+
+
+
+/* Middle Content start*/
+
+#main-content {
+
+    background-color: #f3f4f5;
+
+    display: flex;
+    padding: 1rem 10rem;
+
+
+
+}
+
+#main-content>div {
+    margin-top: 20px;
+}
+
+#main-content>div:nth-child(2) {
+    padding: 0 2rem;
+}
+
+
+.left-panel {
+    width: 70%;
+    background-color: white;
+    box-shadow: 0px 0px 1px grey;
+}
+
+.right-panel {
+    width: 40%;
+    
+}
+
+.sticky {
+    position: sticky;
+    top: 55px;
+    width: 300px;
+    padding-left: 0px;
+    background-color: white;
+    box-shadow: 0px 0px 1px grey;
+}
+
+.sticky div {
+
+    height: 8vh;
+    width: 100%;
+    
+}
+
+.sticky a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 1rem;
+    box-shadow: 0px 0px 1px grey;
+}
+
+.right-panel-heading {
+    font-size: 1.2rem;
+}
+
+/* left box start */
+
+.share-beauty-div{
+    display: grid;
+    grid-template-columns: 10% 20%;
+    
+}
+
+/* left box end */
+
+/* Middle Content End */

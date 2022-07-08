@@ -1,0 +1,12 @@
+List Command - ls
+Change Directory - cd
+Clear Page - clear
+close the gitbash- exit
+
+Make a Directory- mkdir
+remove a directory- rmdir
+
+Create a file- touch filename.extension
+Remove a file - rm filename.extension
+
+edit file- nano filename.extension

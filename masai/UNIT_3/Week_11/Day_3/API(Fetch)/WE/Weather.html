@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+
+<body>
+
+    <h1>Get the City Weather</h1>
+    <input id="city" type="text">
+    <br>
+    <button onclick="getWeather()">Check Weather</button>
+    <div id="data_div"></div>
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    let div = document.getElementById("data_div");
+    async function getWeather() {
+
+        try {
+            let city = document.getElementById("city").value;
+            let response = await fetch(
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=feef8efc37c9f5c7adfc56848292733f`
+            );
+            // entering city name and api key in api url// 
+            let data = await response.json();
+            console.log(data.name);
+            console.log(data);
+
+            let p_name = document.createElement("p");
+            p_name.innerText = data.name;
+            let p_Time = document.createElement("p");
+            p_Time.innerText = data.timezone;
+            let p_speed = document.createElement("p");
+            p_speed.innerText = data.wind.speed;
+
+            div.append(p_name, p_Time, p_speed);
+
+
+        } catch (err) {
+            console.log('err:', err)
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+</script>

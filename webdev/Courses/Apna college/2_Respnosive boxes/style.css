@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: darkblue;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px;
+}
+
+.box{
+
+  width: 25%;
+    height:200px;      
+    float: left;
+    
+}
+.box1{
+    background-color: khaki;
+}
+.box2{
+    background-color: lawngreen;
+}
+.box3{
+    background-color: lightcoral;
+}
+.box4{
+    background-color: lightseagreen;
+}
+
+.name{
+    color: darkred;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bolder;
+    font-family: fantasy;
+}
+
+
+
+@media all  and (max-width:320px){
+  
+    .box1{
+        width:100%;
+    }
+    .box2{
+        width:100%;
+    }
+    .box3{
+        width:100%;
+    }
+    .box4{
+        width:100%;
+    }
+}
+
+@media all and (min-width:321px) and (max-width:768px){
+    .box1{
+        width:50%;
+    }
+    .box2{
+        width:50%;
+    }
+    .box3{
+        width:50%;
+    }
+    .box4{
+        width:50%;
+    }
+}
+
+

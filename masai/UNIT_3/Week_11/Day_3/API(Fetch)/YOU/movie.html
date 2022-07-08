@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <style>
+        * {
+            font-family: roboto, sans-serif;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            background-color: #d789d7;
+            color: white;
+            text-shadow: 1px 1px 2px red;
+            outline: none;
+            border: none;
+
+        }
+
+        button:hover {
+            background-color: #9d65c9;
+            transition: all .3s ease-in-out;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+        }
+
+        input:hover {
+            background-color: #9d65c9;
+            transition: all .3s ease-in-out;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+        }
+
+        input::placeholder {
+            color: white;
+        }
+
+        #i_div {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+        }
+
+        #content img {
+            width: 30%;
+            margin: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="i_div">
+        <h1>Made in Heaven Productions</h1>
+        <input id="movie" type="text" placeholder="Search by movie name"><br><br>
+        <button onclick="showMovies()">Search</button>
+    </div>
+    <div id="result_div"></div>
+
+
+</body>
+
+</html>
+
+<script>
+    
+    var result_div = document.getElementById("result_div");
+
+    async function showMovies() {
+        result_div.innerHTML = null;
+
+        try {
+
+            var m_name = document.getElementById("movie").value;
+
+            let response = await fetch(`http://www.omdbapi.com/?s=${m_name}&apikey=fdaea930&`);
+            let data = await response.json();
+            console.log('data:', data)
+
+
+
+
+            var div = document.createElement('div');
+            div.setAttribute('id', "content");
+            let p_title = document.createElement('p');
+            p_title.innerText = `Movie Name:- ${data.Title}`;
+
+            let p_year = document.createElement('p');
+            p_year.innerText = `Released Year- ${data.Year}`;
+
+
+            let p_rating = document.createElement('p');
+
+            if (data.imdbRating > 8) {
+                p_rating.innerText = `IMDB RAting:- ${data.imdbRating} Recommended`;
+            } else {
+                p_rating.innerText = `IMDB RAting:- ${data.imdbRating}`;
+            }
+
+
+            let poster = document.createElement('img');
+            poster.src = data.Poster;
+
+            let p_date = document.createElement('p');
+            p_date.innerText = `Released Date :- ${data.Released}`;
+
+            let p_time = document.createElement('p');
+            p_time.innerText = `Duration:-  ${data.Runtime}`;
+            div.append(poster, p_title, p_year, p_rating, p_date, p_time);
+
+            result_div.append(div);
+        }
+        
+
+        catch (e) {
+            alert(e);
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+</script>

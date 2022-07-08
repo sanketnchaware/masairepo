@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #container {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+            padding: 10px;
+
+        }
+
+        #left,
+        #right {
+            background-color: lightcyan;
+        }
+
+        .img_container img {
+            width: 100%;
+            height: 15rem;
+        }
+
+        .l1_text_container {
+            padding: 5px;
+            color: white;
+
+        }
+
+        .l1_text_container {
+            background-color: rgb(16, 26, 172);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            background-color: white;
+
+        }
+
+        .card1_img img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .card1_text {
+            padding: 5px;
+        }
+
+        #right div {
+            margin: 10px;
+
+        }
+
+        #left div {
+            margin: 5px;
+
+        }
+
+        @media screen and (max-width: 768px)  {
+            #container {
+
+                display: grid;
+                grid-template-columns: 1fr;
+
+            }
+
+            .card1 {
+                display: none;
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+      
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="left">
+
+            <div class="l1">
+                <div class="img_container">
+                    <img src="https://images.unsplash.com/photo-1629015926131-5a346e14855f?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="">
+                </div>
+                <div class="l1_text_container">
+
+                    <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                    <h4>SANKET CHAWARE</h4>
+                    <h4>SANKET CHAWARE</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo modi, repudiandae quidem
+                        cum numquam commodi ex? </p>
+                </div>
+
+            </div>
+
+
+            <div class="cards card1">
+                <div class="card1_img">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="">
+                </div>
+                <div class="card1_text">
+                    <h3>SANKET CHAWARE</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo modi, repudiandae
+                        quidem
+                        cum numquam commodi ex?</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div id="right">
+
+            <div class="cards">
+                <div class="card1_img">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="">
+                </div>
+                <div class="card1_text">
+                    <h3>SANKET CHAWARE</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo modi, repudiandae
+                        quidem
+                        cum numquam commodi ex?</p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card1_img">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="">
+                </div>
+                <div class="card1_text">
+                    <h3>SANKET CHAWARE</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo modi, repudiandae
+                        quidem
+                        cum numquam commodi ex?</p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card1_img">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="">
+                </div>
+                <div class="card1_text">
+                    <h3>SANKET CHAWARE</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo modi, repudiandae
+                        quidem
+                        cum numquam commodi ex?</p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card1_img">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="">
+                </div>
+                <div class="card1_text">
+                    <h3>SANKET CHAWARE</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum explicabo modi, repudiandae
+                        quidem
+                        cum numquam commodi ex?</p>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>

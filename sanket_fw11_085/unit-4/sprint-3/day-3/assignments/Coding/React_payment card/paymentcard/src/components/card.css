@@ -1,0 +1,43 @@
+* {
+    
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.right_part img {
+
+    margin: 10px 0;
+
+}
+
+.left_part {
+    width: 90%;
+}
+.left_part button {
+    outline: none;
+    border:none;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 3px;
+
+
+}
+
+.right_part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    width: 10%;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: orange
+}

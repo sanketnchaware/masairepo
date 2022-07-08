@@ -1,0 +1,21 @@
+#container {
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 50%;
+  margin: auto;
+  grid-gap: 10px;
+
+
+}
+
+
+
+.secondContainer {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  background-color: red
+}

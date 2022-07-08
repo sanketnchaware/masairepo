@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+    <script>
+        function random(number) {
+            return Math.floor(Math.random() * number);
+        }
+
+        function rand() {
+            return 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        }
+
+        function change_bg() {
+
+            document.body.style.background = rand();
+            console.log(rand);
+
+        }
+
+        window.addEventListener('resize', change_bg);
+    </script>
+</body>
+
+</html>
+
+<!-- Problem
+Create an html page random_bg.html
+Use an event listener to change the body background to a random color on the resize of the window.
+Hint:
+
+You should be listening for an event named resize -->

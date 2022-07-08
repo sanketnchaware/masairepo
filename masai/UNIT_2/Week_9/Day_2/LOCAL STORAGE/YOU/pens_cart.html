@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Pens_cart</title>
+    <style>
+        img {
+            height: 10rem;
+            width: 10rem;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 20%);
+            grid-gap: 2%;
+        }
+
+        #container div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+  
+    <div id="container"></div>
+   
+
+    <h1></h1>
+    <h2></h2>
+    <form onsubmit="apply(event)" action="">
+        <input id="promo_code" type="text">
+        <input value="submit" type="submit">
+    </form>
+    <button onclick="checkButton()" >Checkout</button>
+    <script>
+        var count = 0;
+        var total = 0;
+        var cart_data = JSON.parse(localStorage.getItem("cart"));
+        console.log(cart_data);
+        var parent = document.getElementById("container");
+
+
+        cart_data.forEach(function (product) {
+            count++;
+            var div = document.createElement("div");
+            var name = document.createElement("p");
+            name.textContent = product.name;
+            var price = document.createElement("p");
+            price.textContent = product.price;
+            var image = document.createElement("img");
+            image.src = product.image;
+            div.append(image, name, price);
+            parent.append(div);
+            total = total + product.price;
+
+            var counter = document.querySelector("h1");
+            counter.textContent = `Count = ${count}`;
+
+            var amount = document.querySelector("h2");
+            amount.textContent = `Total = ${total}`;
+
+
+        })
+
+        function apply(event) {
+             event.preventDefault();
+             
+             console.log(promo_code.value)
+            if(promo_code.value=="masai30"){
+                total=total*0.3;
+                var amount = document.querySelector("h2");
+                amount.textContent =total;
+                console.log(total);
+                
+            }
+            promo_code.value="";
+        }
+        function checkButton(){
+            window.location.href="E_Comerce_2.html";
+        }
+    </script>
+</body>
+
+</html>

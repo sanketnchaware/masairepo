@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>flex</title>
+    <style>
+        .cont-2 {
+            display: flex;
+
+        }
+
+        .cont-2 div {
+            width: 150px;
+            height: 400px;
+
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        .c1 {
+            height: 100px;
+            background-color: yellow;
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        .b1 {
+            background-color: red;
+            flex: 1;
+        }
+
+        .b2 {
+            background-color: green;
+            flex: 1;
+        }
+
+        @media screen and (max-width:768px) {
+
+            .cont-2 {
+                display: block;
+            }
+
+            .cont-2 div {
+                width: 760px;
+                height: 400px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="c1">NAVIGATION</div>
+    </div>
+    <div class="cont-2 ">
+        <div class="b b1">LEFT BOX</div>
+        <div class="b b2">RIGHT BOX</div>
+    </div>
+</body>
+
+</html>

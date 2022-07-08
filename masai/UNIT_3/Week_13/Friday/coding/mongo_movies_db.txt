@@ -1,0 +1,1152 @@
+
+
+show dbs
+admin     41 kB
+config   111 kB
+local   73.7 kB
+store   73.7 kB
+web11   73.7 kB
+use movies
+'switched to db movies'
+show collections
+db.createCollection("films")
+{ ok: 1 }
+db.films.find({"movie_name":{$eq:"Lincz"}}).pretty()
+db.films.find({"movie_name":{$eq:"Lincz"}}).pretty()
+db.films.find({"movie_name":{$eq:"Simple Men"}}).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d7"),
+  movie_name: 'Simple Men',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2002,
+  budget: 52 }
+db.films.find({"movie_name":{$ne:"Simple Men"}}).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8cf"),
+  movie_name: 'State of the Union',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1989,
+  budget: 26 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d0"),
+  movie_name: 'Sinbad: The Fifth Voyage',
+  movie_genre: 'Action|Adventure|Fantasy',
+  production_year: 2001,
+  budget: 98 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d1"),
+  movie_name: 'Aurora Borealis',
+  movie_genre: 'Drama|Romance',
+  production_year: 2004,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d2"),
+  movie_name: 'Birds, the Bees and the Italians, The (Signore & signori)',
+  movie_genre: 'Comedy',
+  production_year: 2004,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d3"),
+  movie_name: 'Demolition Man',
+  movie_genre: 'Action|Adventure|Sci-Fi',
+  production_year: 1992,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d4"),
+  movie_name: 'Candidate, The',
+  movie_genre: 'Drama',
+  production_year: 2005,
+  budget: 37 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d5"),
+  movie_name: 'Grand Theft Auto',
+  movie_genre: 'Action|Comedy',
+  production_year: 1998,
+  budget: 49 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d6"),
+  movie_name: 'Pickle, The',
+  movie_genre: 'Comedy',
+  production_year: 1969,
+  budget: 4 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d8"),
+  movie_name: 'Treasure Island',
+  movie_genre: 'Adventure',
+  production_year: 1999,
+  budget: 31 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d9"),
+  movie_name: 'Cabeza de Vaca',
+  movie_genre: 'Action|Adventure',
+  production_year: 2010,
+  budget: 5 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8da"),
+  movie_name: 'Loputon Gehennan liekki',
+  movie_genre: 'Documentary',
+  production_year: 2000,
+  budget: 50 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8db"),
+  movie_name: 'Pacifier, The',
+  movie_genre: 'Action|Comedy',
+  production_year: 1984,
+  budget: 60 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dc"),
+  movie_name: 'Urban Ghost Story',
+  movie_genre: 'Drama',
+  production_year: 2010,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dd"),
+  movie_name: 'Seventh Victim, The',
+  movie_genre: 'Drama|Film-Noir|Horror|Mystery',
+  production_year: 2000,
+  budget: 34 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8de"),
+  movie_name: 'Cutting Edge: Going for the Gold, The',
+  movie_genre: 'Comedy|Drama|Romance',
+  production_year: 2000,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8df"),
+  movie_name: 'Joe',
+  movie_genre: 'Drama',
+  production_year: 1966,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e0"),
+  movie_name: 'Movie Days (Bíódagar)',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1992,
+  budget: 46 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e1"),
+  movie_name: 'Frequencies',
+  movie_genre: 'Mystery|Romance|Sci-Fi',
+  production_year: 1998,
+  budget: 1 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e2"),
+  movie_name: 'Mighty Uke',
+  movie_genre: 'Documentary',
+  production_year: 2003,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e3"),
+  movie_name: 'Exodus: Gods and Kings',
+  movie_genre: 'Action|Adventure|Drama',
+  production_year: 1992,
+  budget: 73 }
+Type "it" for more
+db.films.find({"budget ":{$gte:10}}).pretty()
+db.films.find({"budget":{$gte:10}}).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8cf"),
+  movie_name: 'State of the Union',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1989,
+  budget: 26 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d0"),
+  movie_name: 'Sinbad: The Fifth Voyage',
+  movie_genre: 'Action|Adventure|Fantasy',
+  production_year: 2001,
+  budget: 98 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d1"),
+  movie_name: 'Aurora Borealis',
+  movie_genre: 'Drama|Romance',
+  production_year: 2004,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d2"),
+  movie_name: 'Birds, the Bees and the Italians, The (Signore & signori)',
+  movie_genre: 'Comedy',
+  production_year: 2004,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d3"),
+  movie_name: 'Demolition Man',
+  movie_genre: 'Action|Adventure|Sci-Fi',
+  production_year: 1992,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d4"),
+  movie_name: 'Candidate, The',
+  movie_genre: 'Drama',
+  production_year: 2005,
+  budget: 37 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d5"),
+  movie_name: 'Grand Theft Auto',
+  movie_genre: 'Action|Comedy',
+  production_year: 1998,
+  budget: 49 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d7"),
+  movie_name: 'Simple Men',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2002,
+  budget: 52 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d8"),
+  movie_name: 'Treasure Island',
+  movie_genre: 'Adventure',
+  production_year: 1999,
+  budget: 31 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8da"),
+  movie_name: 'Loputon Gehennan liekki',
+  movie_genre: 'Documentary',
+  production_year: 2000,
+  budget: 50 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8db"),
+  movie_name: 'Pacifier, The',
+  movie_genre: 'Action|Comedy',
+  production_year: 1984,
+  budget: 60 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dc"),
+  movie_name: 'Urban Ghost Story',
+  movie_genre: 'Drama',
+  production_year: 2010,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dd"),
+  movie_name: 'Seventh Victim, The',
+  movie_genre: 'Drama|Film-Noir|Horror|Mystery',
+  production_year: 2000,
+  budget: 34 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8df"),
+  movie_name: 'Joe',
+  movie_genre: 'Drama',
+  production_year: 1966,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e0"),
+  movie_name: 'Movie Days (Bíódagar)',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1992,
+  budget: 46 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e2"),
+  movie_name: 'Mighty Uke',
+  movie_genre: 'Documentary',
+  production_year: 2003,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e3"),
+  movie_name: 'Exodus: Gods and Kings',
+  movie_genre: 'Action|Adventure|Drama',
+  production_year: 1992,
+  budget: 73 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e4"),
+  movie_name: 'Mean Guns',
+  movie_genre: 'Action|Crime|Thriller',
+  production_year: 2007,
+  budget: 80 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e5"),
+  movie_name: 'The Brides of Fu Manchu',
+  movie_genre: 'Action|Crime|Horror|Sci-Fi',
+  production_year: 1996,
+  budget: 33 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e6"),
+  movie_name: 'Article 99',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2002,
+  budget: 98 }
+Type "it" for more
+db.films.find({"budget":{$lte:10}}).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d6"),
+  movie_name: 'Pickle, The',
+  movie_genre: 'Comedy',
+  production_year: 1969,
+  budget: 4 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d9"),
+  movie_name: 'Cabeza de Vaca',
+  movie_genre: 'Action|Adventure',
+  production_year: 2010,
+  budget: 5 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8de"),
+  movie_name: 'Cutting Edge: Going for the Gold, The',
+  movie_genre: 'Comedy|Drama|Romance',
+  production_year: 2000,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e1"),
+  movie_name: 'Frequencies',
+  movie_genre: 'Mystery|Romance|Sci-Fi',
+  production_year: 1998,
+  budget: 1 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8ef"),
+  movie_name: 'Moomins on the Riviera (Muumit Rivieralla)',
+  movie_genre: 'Animation|Children|Comedy',
+  production_year: 1999,
+  budget: 7 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f6"),
+  movie_name: 'Silent Night, Deadly Night 5: The Toy Maker',
+  movie_genre: 'Horror|Sci-Fi',
+  production_year: 2001,
+  budget: 6 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8fa"),
+  movie_name: 'Blast of Silence',
+  movie_genre: 'Crime|Drama|Thriller',
+  production_year: 1998,
+  budget: 9 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8fc"),
+  movie_name: 'Little Hamlet',
+  movie_genre: '(no genres listed)',
+  production_year: 2005,
+  budget: 7 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd903"),
+  movie_name: 'Chasing Christmas',
+  movie_genre: 'Comedy|Fantasy',
+  production_year: 1985,
+  budget: 2 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd90a"),
+  movie_name: 'Sheitan',
+  movie_genre: 'Comedy|Horror|Thriller',
+  production_year: 2006,
+  budget: 3 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd91a"),
+  movie_name: 'Taking Care of Business',
+  movie_genre: 'Comedy',
+  production_year: 2012,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd925"),
+  movie_name: 'Sailor Who Fell from Grace with the Sea, The',
+  movie_genre: 'Drama',
+  production_year: 1991,
+  budget: 9 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd931"),
+  movie_name: 'Frozen Fever',
+  movie_genre: 'Adventure|Animation',
+  production_year: 1993,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd932"),
+  movie_name: 'George Washington Slept Here',
+  movie_genre: 'Comedy',
+  production_year: 1997,
+  budget: 7 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd943"),
+  movie_name: 'Catch .44',
+  movie_genre: 'Action|Drama|Thriller',
+  production_year: 2000,
+  budget: 2 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd944"),
+  movie_name: 'Turning, The',
+  movie_genre: 'Drama',
+  production_year: 1996,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd949"),
+  movie_name: 'Apartment Zero',
+  movie_genre: 'Drama|Thriller',
+  production_year: 1994,
+  budget: 1 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd95b"),
+  movie_name: 'Cabin Fever',
+  movie_genre: 'Horror|Thriller',
+  production_year: 2001,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd972"),
+  movie_name: 'Jesus liebt mich',
+  movie_genre: 'Comedy',
+  production_year: 1991,
+  budget: 3 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd979"),
+  movie_name: 'Golden Boy',
+  movie_genre: 'Drama',
+  production_year: 2003,
+  budget: 8 }
+Type "it" for more
+db.films.find( { $and: [ { "production_year " : { $gt: 2000 } }, { "budget ": { $gt : 10 } } ] } ).pretty()
+db.films.find( { $and: [ { "production_year" : { $gt: 2000 } }, { "budget": { $gt : 10 } } ] } ).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d0"),
+  movie_name: 'Sinbad: The Fifth Voyage',
+  movie_genre: 'Action|Adventure|Fantasy',
+  production_year: 2001,
+  budget: 98 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d1"),
+  movie_name: 'Aurora Borealis',
+  movie_genre: 'Drama|Romance',
+  production_year: 2004,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d2"),
+  movie_name: 'Birds, the Bees and the Italians, The (Signore & signori)',
+  movie_genre: 'Comedy',
+  production_year: 2004,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d4"),
+  movie_name: 'Candidate, The',
+  movie_genre: 'Drama',
+  production_year: 2005,
+  budget: 37 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d7"),
+  movie_name: 'Simple Men',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2002,
+  budget: 52 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dc"),
+  movie_name: 'Urban Ghost Story',
+  movie_genre: 'Drama',
+  production_year: 2010,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e2"),
+  movie_name: 'Mighty Uke',
+  movie_genre: 'Documentary',
+  production_year: 2003,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e4"),
+  movie_name: 'Mean Guns',
+  movie_genre: 'Action|Crime|Thriller',
+  production_year: 2007,
+  budget: 80 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e6"),
+  movie_name: 'Article 99',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2002,
+  budget: 98 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e7"),
+  movie_name: 'Can\'t Help Singing',
+  movie_genre: 'Musical|Western',
+  production_year: 2002,
+  budget: 65 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e8"),
+  movie_name: 'Don\'t Go In the Woods',
+  movie_genre: 'Horror',
+  production_year: 2004,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e9"),
+  movie_name: 'Donovan\'s Echo',
+  movie_genre: 'Drama|Sci-Fi|Thriller',
+  production_year: 2011,
+  budget: 45 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8eb"),
+  movie_name: 'Four Shades of Brown (Fyra nyanser av brunt)',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2009,
+  budget: 33 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8ec"),
+  movie_name: 'Le ultime ore di una vergine',
+  movie_genre: '(no genres listed)',
+  production_year: 2010,
+  budget: 32 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8ed"),
+  movie_name: 'Trees Lounge',
+  movie_genre: 'Drama',
+  production_year: 2005,
+  budget: 76 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f1"),
+  movie_name: 'Long John Silver',
+  movie_genre: 'Action|Adventure',
+  production_year: 2002,
+  budget: 45 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f2"),
+  movie_name: 'Pitkä kuuma kesä',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2004,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f3"),
+  movie_name: 'Désiré',
+  movie_genre: '(no genres listed)',
+  production_year: 2001,
+  budget: 40 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f7"),
+  movie_name: 'Bride of Boogedy',
+  movie_genre: 'Adventure|Children|Drama|Western',
+  production_year: 2008,
+  budget: 63 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f9"),
+  movie_name: 'Bridge of Dragons',
+  movie_genre: 'Action|Romance|Sci-Fi|Thriller',
+  production_year: 2010,
+  budget: 41 }
+Type "it" for more
+db.films.find( { $or: [ { "production_year" : { $gt: 2000 } }, { "budget": { $gt : 10 } } ] } ).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8cf"),
+  movie_name: 'State of the Union',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1989,
+  budget: 26 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d0"),
+  movie_name: 'Sinbad: The Fifth Voyage',
+  movie_genre: 'Action|Adventure|Fantasy',
+  production_year: 2001,
+  budget: 98 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d1"),
+  movie_name: 'Aurora Borealis',
+  movie_genre: 'Drama|Romance',
+  production_year: 2004,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d2"),
+  movie_name: 'Birds, the Bees and the Italians, The (Signore & signori)',
+  movie_genre: 'Comedy',
+  production_year: 2004,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d3"),
+  movie_name: 'Demolition Man',
+  movie_genre: 'Action|Adventure|Sci-Fi',
+  production_year: 1992,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d4"),
+  movie_name: 'Candidate, The',
+  movie_genre: 'Drama',
+  production_year: 2005,
+  budget: 37 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d5"),
+  movie_name: 'Grand Theft Auto',
+  movie_genre: 'Action|Comedy',
+  production_year: 1998,
+  budget: 49 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d7"),
+  movie_name: 'Simple Men',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2002,
+  budget: 52 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d8"),
+  movie_name: 'Treasure Island',
+  movie_genre: 'Adventure',
+  production_year: 1999,
+  budget: 31 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d9"),
+  movie_name: 'Cabeza de Vaca',
+  movie_genre: 'Action|Adventure',
+  production_year: 2010,
+  budget: 5 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8da"),
+  movie_name: 'Loputon Gehennan liekki',
+  movie_genre: 'Documentary',
+  production_year: 2000,
+  budget: 50 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8db"),
+  movie_name: 'Pacifier, The',
+  movie_genre: 'Action|Comedy',
+  production_year: 1984,
+  budget: 60 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dc"),
+  movie_name: 'Urban Ghost Story',
+  movie_genre: 'Drama',
+  production_year: 2010,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dd"),
+  movie_name: 'Seventh Victim, The',
+  movie_genre: 'Drama|Film-Noir|Horror|Mystery',
+  production_year: 2000,
+  budget: 34 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8df"),
+  movie_name: 'Joe',
+  movie_genre: 'Drama',
+  production_year: 1966,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e0"),
+  movie_name: 'Movie Days (Bíódagar)',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1992,
+  budget: 46 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e2"),
+  movie_name: 'Mighty Uke',
+  movie_genre: 'Documentary',
+  production_year: 2003,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e3"),
+  movie_name: 'Exodus: Gods and Kings',
+  movie_genre: 'Action|Adventure|Drama',
+  production_year: 1992,
+  budget: 73 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e4"),
+  movie_name: 'Mean Guns',
+  movie_genre: 'Action|Crime|Thriller',
+  production_year: 2007,
+  budget: 80 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e5"),
+  movie_name: 'The Brides of Fu Manchu',
+  movie_genre: 'Action|Crime|Horror|Sci-Fi',
+  production_year: 1996,
+  budget: 33 }
+Type "it" for more
+ db.films.find( { $and: [ { "production_year" : { $lt: 2000 } }, { "budget": { $lt : 10 } } ] } ).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d6"),
+  movie_name: 'Pickle, The',
+  movie_genre: 'Comedy',
+  production_year: 1969,
+  budget: 4 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e1"),
+  movie_name: 'Frequencies',
+  movie_genre: 'Mystery|Romance|Sci-Fi',
+  production_year: 1998,
+  budget: 1 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8ef"),
+  movie_name: 'Moomins on the Riviera (Muumit Rivieralla)',
+  movie_genre: 'Animation|Children|Comedy',
+  production_year: 1999,
+  budget: 7 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8fa"),
+  movie_name: 'Blast of Silence',
+  movie_genre: 'Crime|Drama|Thriller',
+  production_year: 1998,
+  budget: 9 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd903"),
+  movie_name: 'Chasing Christmas',
+  movie_genre: 'Comedy|Fantasy',
+  production_year: 1985,
+  budget: 2 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd925"),
+  movie_name: 'Sailor Who Fell from Grace with the Sea, The',
+  movie_genre: 'Drama',
+  production_year: 1991,
+  budget: 9 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd931"),
+  movie_name: 'Frozen Fever',
+  movie_genre: 'Adventure|Animation',
+  production_year: 1993,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd932"),
+  movie_name: 'George Washington Slept Here',
+  movie_genre: 'Comedy',
+  production_year: 1997,
+  budget: 7 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd944"),
+  movie_name: 'Turning, The',
+  movie_genre: 'Drama',
+  production_year: 1996,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd949"),
+  movie_name: 'Apartment Zero',
+  movie_genre: 'Drama|Thriller',
+  production_year: 1994,
+  budget: 1 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd972"),
+  movie_name: 'Jesus liebt mich',
+  movie_genre: 'Comedy',
+  production_year: 1991,
+  budget: 3 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd995"),
+  movie_name: 'Workingman\'s Death',
+  movie_genre: 'Documentary',
+  production_year: 1990,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfda0a"),
+  movie_name: 'Big Night, The',
+  movie_genre: 'Drama|Film-Noir|Thriller',
+  production_year: 1996,
+  budget: 2 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfda32"),
+  movie_name: 'Scarlet Letter, The',
+  movie_genre: 'Drama',
+  production_year: 1995,
+  budget: 3 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfda43"),
+  movie_name: 'Asthenic Syndrome, The (Astenicheskiy sindrom)',
+  movie_genre: 'Drama',
+  production_year: 1994,
+  budget: 2 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfda82"),
+  movie_name: 'Experience Preferred... But Not Essential',
+  movie_genre: 'Drama',
+  production_year: 1991,
+  budget: 3 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfda92"),
+  movie_name: 'Great Silence, The (Grande silenzio, Il)',
+  movie_genre: 'Drama|Western',
+  production_year: 1987,
+  budget: 6 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdaaf"),
+  movie_name: 'Baby Face',
+  movie_genre: 'Drama',
+  production_year: 1999,
+  budget: 3 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdad3"),
+  movie_name: 'Midnight Chronicles',
+  movie_genre: 'Action|Adventure|Fantasy',
+  production_year: 1989,
+  budget: 6 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdad4"),
+  movie_name: 'Touch the Top of the World',
+  movie_genre: 'Drama',
+  production_year: 1995,
+  budget: 3 }
+Type "it" for more
+db.films.find( { $or: [ { "production_year" : { $lt: 2000 } }, { "budget": { $lt : 10 } } ] } ).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8cf"),
+  movie_name: 'State of the Union',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1989,
+  budget: 26 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d3"),
+  movie_name: 'Demolition Man',
+  movie_genre: 'Action|Adventure|Sci-Fi',
+  production_year: 1992,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d5"),
+  movie_name: 'Grand Theft Auto',
+  movie_genre: 'Action|Comedy',
+  production_year: 1998,
+  budget: 49 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d6"),
+  movie_name: 'Pickle, The',
+  movie_genre: 'Comedy',
+  production_year: 1969,
+  budget: 4 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d8"),
+  movie_name: 'Treasure Island',
+  movie_genre: 'Adventure',
+  production_year: 1999,
+  budget: 31 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d9"),
+  movie_name: 'Cabeza de Vaca',
+  movie_genre: 'Action|Adventure',
+  production_year: 2010,
+  budget: 5 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8db"),
+  movie_name: 'Pacifier, The',
+  movie_genre: 'Action|Comedy',
+  production_year: 1984,
+  budget: 60 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8de"),
+  movie_name: 'Cutting Edge: Going for the Gold, The',
+  movie_genre: 'Comedy|Drama|Romance',
+  production_year: 2000,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8df"),
+  movie_name: 'Joe',
+  movie_genre: 'Drama',
+  production_year: 1966,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e0"),
+  movie_name: 'Movie Days (Bíódagar)',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1992,
+  budget: 46 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e1"),
+  movie_name: 'Frequencies',
+  movie_genre: 'Mystery|Romance|Sci-Fi',
+  production_year: 1998,
+  budget: 1 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e3"),
+  movie_name: 'Exodus: Gods and Kings',
+  movie_genre: 'Action|Adventure|Drama',
+  production_year: 1992,
+  budget: 73 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e5"),
+  movie_name: 'The Brides of Fu Manchu',
+  movie_genre: 'Action|Crime|Horror|Sci-Fi',
+  production_year: 1996,
+  budget: 33 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8ea"),
+  movie_name: 'R100',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1995,
+  budget: 90 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8ee"),
+  movie_name: 'North West Frontier',
+  movie_genre: 'Adventure|Drama|War',
+  production_year: 1986,
+  budget: 91 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8ef"),
+  movie_name: 'Moomins on the Riviera (Muumit Rivieralla)',
+  movie_genre: 'Animation|Children|Comedy',
+  production_year: 1999,
+  budget: 7 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f0"),
+  movie_name: 'Of Freaks and Men (Pro urodov i lyudey)',
+  movie_genre: 'Drama',
+  production_year: 1997,
+  budget: 90 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f4"),
+  movie_name: 'Lake City',
+  movie_genre: 'Drama',
+  production_year: 1993,
+  budget: 32 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f5"),
+  movie_name: 'Belle comme la femme d\'un autre',
+  movie_genre: 'Comedy',
+  production_year: 1987,
+  budget: 72 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f6"),
+  movie_name: 'Silent Night, Deadly Night 5: The Toy Maker',
+  movie_genre: 'Horror|Sci-Fi',
+  production_year: 2001,
+  budget: 6 }
+Type "it" for more
+ db.films.find({"production_year":{$in:[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010]}}).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d0"),
+  movie_name: 'Sinbad: The Fifth Voyage',
+  movie_genre: 'Action|Adventure|Fantasy',
+  production_year: 2001,
+  budget: 98 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d1"),
+  movie_name: 'Aurora Borealis',
+  movie_genre: 'Drama|Romance',
+  production_year: 2004,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d2"),
+  movie_name: 'Birds, the Bees and the Italians, The (Signore & signori)',
+  movie_genre: 'Comedy',
+  production_year: 2004,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d4"),
+  movie_name: 'Candidate, The',
+  movie_genre: 'Drama',
+  production_year: 2005,
+  budget: 37 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d7"),
+  movie_name: 'Simple Men',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2002,
+  budget: 52 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d9"),
+  movie_name: 'Cabeza de Vaca',
+  movie_genre: 'Action|Adventure',
+  production_year: 2010,
+  budget: 5 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8da"),
+  movie_name: 'Loputon Gehennan liekki',
+  movie_genre: 'Documentary',
+  production_year: 2000,
+  budget: 50 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dc"),
+  movie_name: 'Urban Ghost Story',
+  movie_genre: 'Drama',
+  production_year: 2010,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dd"),
+  movie_name: 'Seventh Victim, The',
+  movie_genre: 'Drama|Film-Noir|Horror|Mystery',
+  production_year: 2000,
+  budget: 34 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8de"),
+  movie_name: 'Cutting Edge: Going for the Gold, The',
+  movie_genre: 'Comedy|Drama|Romance',
+  production_year: 2000,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e2"),
+  movie_name: 'Mighty Uke',
+  movie_genre: 'Documentary',
+  production_year: 2003,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e4"),
+  movie_name: 'Mean Guns',
+  movie_genre: 'Action|Crime|Thriller',
+  production_year: 2007,
+  budget: 80 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e6"),
+  movie_name: 'Article 99',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2002,
+  budget: 98 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e7"),
+  movie_name: 'Can\'t Help Singing',
+  movie_genre: 'Musical|Western',
+  production_year: 2002,
+  budget: 65 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e8"),
+  movie_name: 'Don\'t Go In the Woods',
+  movie_genre: 'Horror',
+  production_year: 2004,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8eb"),
+  movie_name: 'Four Shades of Brown (Fyra nyanser av brunt)',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2009,
+  budget: 33 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8ec"),
+  movie_name: 'Le ultime ore di una vergine',
+  movie_genre: '(no genres listed)',
+  production_year: 2010,
+  budget: 32 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8ed"),
+  movie_name: 'Trees Lounge',
+  movie_genre: 'Drama',
+  production_year: 2005,
+  budget: 76 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f1"),
+  movie_name: 'Long John Silver',
+  movie_genre: 'Action|Adventure',
+  production_year: 2002,
+  budget: 45 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f2"),
+  movie_name: 'Pitkä kuuma kesä',
+  movie_genre: 'Comedy|Drama',
+  production_year: 2004,
+  budget: 47 }
+Type "it" for more
+db.films.find().sort({"production_year":1},{"movie_name":1}).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfdbcf"),
+  movie_name: 'Emergency Squad',
+  movie_genre: 'Action|Thriller',
+  production_year: 1956,
+  budget: 6 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdaf7"),
+  movie_name: 'Ama lur (Tierra Madre)',
+  movie_genre: 'Documentary',
+  production_year: 1958,
+  budget: 92 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdaa5"),
+  movie_name: 'Other Side of Midnight, The',
+  movie_genre: 'Drama|Romance|Thriller',
+  production_year: 1959,
+  budget: 44 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdae6"),
+  movie_name: 'Red Baron, The (Der rote Baron)',
+  movie_genre: 'Action|Drama|Romance|War',
+  production_year: 1959,
+  budget: 72 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd9b1"),
+  movie_name: 'Thin Line Between Love and Hate, A',
+  movie_genre: 'Comedy',
+  production_year: 1960,
+  budget: 83 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdbf4"),
+  movie_name: 'Pelle Svanslös i Amerikatt',
+  movie_genre: 'Animation|Children',
+  production_year: 1961,
+  budget: 48 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdc65"),
+  movie_name: 'Hell Drivers',
+  movie_genre: 'Drama',
+  production_year: 1962,
+  budget: 25 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd9c8"),
+  movie_name: 'Death on the Nile',
+  movie_genre: 'Crime|Mystery',
+  production_year: 1963,
+  budget: 16 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd966"),
+  movie_name: 'Adventures of a Dentist',
+  movie_genre: 'Comedy',
+  production_year: 1964,
+  budget: 17 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdc2b"),
+  movie_name: 'Four Lions',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1965,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8df"),
+  movie_name: 'Joe',
+  movie_genre: 'Drama',
+  production_year: 1966,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd9ed"),
+  movie_name: 'Audrey Rose',
+  movie_genre: 'Horror',
+  production_year: 1966,
+  budget: 73 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdb8b"),
+  movie_name: 'Weird Woman',
+  movie_genre: 'Drama',
+  production_year: 1966,
+  budget: 98 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd97d"),
+  movie_name: 'Cremaster 3',
+  movie_genre: 'Drama',
+  production_year: 1967,
+  budget: 50 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdbfc"),
+  movie_name: 'Spider Lilies (Ci qing)',
+  movie_genre: 'Drama|Romance',
+  production_year: 1967,
+  budget: 76 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdb0f"),
+  movie_name: 'Lovely & Amazing',
+  movie_genre: 'Comedy|Drama|Romance',
+  production_year: 1968,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d6"),
+  movie_name: 'Pickle, The',
+  movie_genre: 'Comedy',
+  production_year: 1969,
+  budget: 4 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdbf9"),
+  movie_name: 'Mei and the Kittenbus',
+  movie_genre: 'Animation|Fantasy',
+  production_year: 1971,
+  budget: 56 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd9ba"),
+  movie_name: 'Ball of Fire',
+  movie_genre: 'Comedy|Romance',
+  production_year: 1972,
+  budget: 17 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8f8"),
+  movie_name: 'Eight Miles High (Das wilde Leben)',
+  movie_genre: 'Drama',
+  production_year: 1973,
+  budget: 29 }
+Type "it" for more
+db.films.find().sort({"production_year":1},{"movie_name":1}).skip(5).limit(5).pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfdbf4"),
+  movie_name: 'Pelle Svanslös i Amerikatt',
+  movie_genre: 'Animation|Children',
+  production_year: 1961,
+  budget: 48 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdc65"),
+  movie_name: 'Hell Drivers',
+  movie_genre: 'Drama',
+  production_year: 1962,
+  budget: 25 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd9c8"),
+  movie_name: 'Death on the Nile',
+  movie_genre: 'Crime|Mystery',
+  production_year: 1963,
+  budget: 16 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd966"),
+  movie_name: 'Adventures of a Dentist',
+  movie_genre: 'Comedy',
+  production_year: 1964,
+  budget: 17 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfdc2b"),
+  movie_name: 'Four Lions',
+  movie_genre: 'Comedy|Drama',
+  production_year: 1965,
+  budget: 54 }
+db.films.find().sort({"prodcution_year":1},{"movie_name":1}).map(doc=>db.films.update({_id:doc._id},{$unset:{movie_genre:1}}))
+'DeprecationWarning: Collection.update() is deprecated. Use updateOne, updateMany, or bulkWrite.'
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+Type "it" for more
+db.films.find().pretty()
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8cf"),
+  movie_name: 'State of the Union',
+  production_year: 1989,
+  budget: 26 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d0"),
+  movie_name: 'Sinbad: The Fifth Voyage',
+  production_year: 2001,
+  budget: 98 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d1"),
+  movie_name: 'Aurora Borealis',
+  production_year: 2004,
+  budget: 54 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d2"),
+  movie_name: 'Birds, the Bees and the Italians, The (Signore & signori)',
+  production_year: 2004,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d3"),
+  movie_name: 'Demolition Man',
+  production_year: 1992,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d4"),
+  movie_name: 'Candidate, The',
+  production_year: 2005,
+  budget: 37 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d5"),
+  movie_name: 'Grand Theft Auto',
+  production_year: 1998,
+  budget: 49 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d6"),
+  movie_name: 'Pickle, The',
+  production_year: 1969,
+  budget: 4 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d7"),
+  movie_name: 'Simple Men',
+  production_year: 2002,
+  budget: 52 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d8"),
+  movie_name: 'Treasure Island',
+  production_year: 1999,
+  budget: 31 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8d9"),
+  movie_name: 'Cabeza de Vaca',
+  production_year: 2010,
+  budget: 5 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8da"),
+  movie_name: 'Loputon Gehennan liekki',
+  production_year: 2000,
+  budget: 50 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8db"),
+  movie_name: 'Pacifier, The',
+  production_year: 1984,
+  budget: 60 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dc"),
+  movie_name: 'Urban Ghost Story',
+  production_year: 2010,
+  budget: 29 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8dd"),
+  movie_name: 'Seventh Victim, The',
+  production_year: 2000,
+  budget: 34 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8de"),
+  movie_name: 'Cutting Edge: Going for the Gold, The',
+  production_year: 2000,
+  budget: 8 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8df"),
+  movie_name: 'Joe',
+  production_year: 1966,
+  budget: 47 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e0"),
+  movie_name: 'Movie Days (Bíódagar)',
+  production_year: 1992,
+  budget: 46 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e1"),
+  movie_name: 'Frequencies',
+  production_year: 1998,
+  budget: 1 }
+{ _id: ObjectId("614b5ccb03f11bd12bcfd8e2"),
+  movie_name: 'Mighty Uke',
+  production_year: 2003,
+  budget: 54 }
+Type "it" for more

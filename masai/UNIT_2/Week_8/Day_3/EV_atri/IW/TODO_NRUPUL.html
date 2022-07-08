@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRUPUL Todo</title>
+    <style>
+        td {
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label>Name</label>
+        <input id="name" type="text">
+        <label>Quantity</label>
+        <input id="quantity" type="number">
+        <label>Priority</label>
+        <select id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Quantity</td>
+            <td>Priority</td>
+            <td>Clicks to Mark as Complete</td>
+            <td>Click to remove</td>
+        </tr>
+    </table>
+
+    <script>
+        var add_data = function (event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var quantity = document.getElementById("quantity").value;
+            var priority = document.getElementById("priority").value;
+            create_item(name, quantity, priority);
+        }
+
+        var complete = function (event) {
+            var parent=event.target.parentNode;
+            console.log(parent);
+            parent.style.backgroundColor ="green";
+        }
+
+        var deleted = function (event) {
+           var parent=event.target.parentNode;
+           alert("Do you want to remove?");
+           parent.remove();
+           
+        }
+
+
+        function create_item(name, quantity, priority) {
+            var parent = document.querySelector('table');
+            var row = document.createElement('tr');
+
+            var c1 = document.createElement('td');
+            c1.textContent = name;
+
+            var c2 = document.createElement('td');
+            c2.textContent = quantity;
+
+            var c3 = document.createElement('td');
+            c3.textContent = priority;
+
+            var c4 = document.createElement('td');
+            c4.textContent = "Mark Complete";
+            c4.addEventListener('click', complete);
+
+            var c5 = document.createElement('td');
+            c5.textContent = "Delete";
+            c5.addEventListener('click', deleted);
+
+            row.appendChild(c1);
+            row.appendChild(c2);
+            row.appendChild(c3);
+            row.appendChild(c4);
+            row.appendChild(c5);
+
+            parent.appendChild(row);
+        }
+
+        var form = document.querySelector('form');
+        form.addEventListener('submit', add_data);
+       
+    </script>
+</body>
+
+</html>

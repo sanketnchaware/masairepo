@@ -1,0 +1,40 @@
+body{
+    width: 70%;
+    margin:  auto;
+    padding-top: 50px;
+    background-color: gainsboro;
+}
+.im1 {
+    float: right;
+    width: 50vh;
+    clip-path: circle(47.5% at 50% 50%);
+    
+  }
+  .im2 {
+    float: left;
+    max-width: 50vh;
+    clip-path: circle(47.5% at 50% 50%);
+    
+  }
+  .im3 {
+    float: right;
+    width: 50vh;
+    clip-path: circle(47.5% at 50% 50%);
+    
+  }
+  .im4 {
+    float: left;
+    width: 50vh;
+    clip-path: circle(47.5% at 50% 50%);
+    
+  }
+
+ .box{
+     margin: 20px;
+     background-color: grey;
+     padding: 10px;
+ }
+
+  p{
+      font-size: 1.5rem;
+    }

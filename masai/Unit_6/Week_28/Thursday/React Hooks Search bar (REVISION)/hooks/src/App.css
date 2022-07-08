@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.result {
+  width: 30%;
+  max-height: 220px;
+  overflow: scroll;
+  margin: auto;
+}

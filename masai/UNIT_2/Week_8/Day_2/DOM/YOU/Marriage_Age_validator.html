@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Age</title>
+</head>
+<body>
+    <select  id="gender">Gender
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <br><br>
+    <input type="text" id="year">
+    <br><br>
+    <button onclick="status()">Check Married</button>
+
+    <script>
+  function status() {
+    var select=document.getElementById("gender");
+    var Gen=select.options[select.selectedIndex].value;
+    var age=document.getElementById('year').value;
+    if(Gen=="male" && age>=23){
+        alert("Your age is legal to marry ");
+    }
+    else if(Gen=="female" && age<18){
+        alert("You are so small");
+
+    }
+    else{
+        alert("Get older");
+    }
+  }
+
+        
+    </script>
+</body>
+</html>

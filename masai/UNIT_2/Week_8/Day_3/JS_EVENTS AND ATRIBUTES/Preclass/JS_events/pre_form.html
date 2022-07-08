@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="signup">
+        <input type="email" id="email">
+        <input type="password" id="password">
+        <input type="submit" value="Submit">
+    </form>
+    <p id="errors"></p>
+
+    <script>
+        var form = document.getElementById('signup');
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+        var message = document.getElementById('errors');
+
+        function validate(event) {
+            if (email.value == '' || password.value == '') {
+                event.preventDefault();
+                //to Prevent from submitting the form to server//
+                message.textContent = "Credentials are empty";
+            } else {
+                message.textContent = "Submitted";
+            }
+
+        }
+        form.addEventListener('submit', validate);
+    </script>
+</body>
+
+</html>

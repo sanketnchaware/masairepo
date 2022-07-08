@@ -1,0 +1,34 @@
+body{
+    background-color: lightyellow;
+    size: 5px;
+    margin: 0px;
+    padding: 10px;
+}
+
+h1{
+    color: #66bfbf;
+
+}
+h3{
+    color: #66bfbf;
+}
+hr{
+    border-color: grey;
+     border-style: none;
+     border-top-style:dotted;
+     border-width: 5px;
+     width:5%;
+    
+ }
+.circular{
+    border-radius: 100%;  
+} 
+.bottom
+{
+    background-color: violet;
+    margin-bottom: 0px;
+}
+.hobbies{
+    background-color:royalblue;
+    margin-bottom: 0px;
+}

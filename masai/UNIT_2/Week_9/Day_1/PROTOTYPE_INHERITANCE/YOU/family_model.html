@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Inheritance</title>
+</head>
+
+<body>
+    <script>
+        //using Object.create//
+        const Grandparents = {
+            father: "Gangadhar",
+            mother: "Laxmibai",
+        }
+        var Parent = Object.create(Grandparents);
+        Parent.father = "Naganath";
+        Parent.mother = "Saraswati";
+
+        const Child = Object.create(Parent);
+        Child.father = "Sanket";
+        Child.mother = "Rutu"
+
+        console.log(Grandparents);
+        console.log(Parent);
+        console.log(Child);
+
+
+//--------------------------------------------------------------//
+
+
+
+        //using constructor function//
+
+        function Parents(fname, mname) {
+            this.father = fname;
+            this.mother = mname;
+        }
+        var grandparents = new Parents("Gangadhar", "Laxmibai");
+        var parents = new Parents("Naganath", "Saru");
+        var children = new Parents("Sanket", "Rutu");
+
+        console.log(grandparents);
+        console.log(parents);
+        console.log(children);
+    </script>
+</body>
+
+</html>

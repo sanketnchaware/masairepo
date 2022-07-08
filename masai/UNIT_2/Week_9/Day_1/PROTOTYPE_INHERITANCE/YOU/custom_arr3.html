@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Cusomt_Arr3</title>
+
+</head>
+
+<body>
+    <script>
+        function MyArray() {
+            Object.defineProperty(this, "length", {
+                value: 0,
+                writable: true,
+                enumerable: false,
+                configurable: true,
+            });
+            this.length = arguments.length;
+            for (var i = 0; i < arguments.length; i++) {
+                this[i] = arguments[i];
+            }
+        }
+        var arr = new MyArray("sankya", "unmya", "tamasha");
+
+        MyArray.prototype.पुश = function (element) {
+            let index = this.length;
+            this[index] = element;
+        }
+
+        MyArray.prototype.उलटा = function (item) {
+
+            var ulta = [];
+            var input = Object.values(item);
+            var output = input.reverse();
+            for (let i = this.length - 1; i >= 0; i--) {
+                ulta.push(this[i]);
+            }
+
+            for (let z = 0; z < this.length; z++) {
+                this[z] = ulta[z];
+            }
+        }
+        MyArray.prototype.पहिला = function (element) {
+            console.log(element[0]);
+        }
+
+        arr.पुश("papa");
+        arr.उलटा(arr);
+        arr.पहिला(arr);
+        console.log(Object.values(arr));
+    </script>
+</body>
+
+</html>

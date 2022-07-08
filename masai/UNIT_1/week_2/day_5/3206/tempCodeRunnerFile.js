@@ -1,0 +1,1 @@
+ var highest=items[0];

@@ -1,0 +1,128 @@
+* {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    font-family: cursive
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1px;
+    width: 100%;
+    color: white;
+    text-shadow: 0 0 20px white;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4rem grey;
+    background-color: black
+}
+
+body {
+    background-color: black;
+}
+
+.rest_container_div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+    background: transparent;
+}
+
+.item_first_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 50px grey;
+    height: 220px;
+
+
+}
+
+.item_first_div div {
+    margin: 0.2rem;
+}
+
+.item_img img {
+    width: 180px;
+    height: 200px;
+
+    border-radius: 0.5rem;
+
+}
+
+.item_details p:first-child {
+    color: brown;
+    font-size: 1.5rem;
+    font-weight: 800;
+
+}
+
+.item_details p:nth-child(2) {
+    color: grey;
+    font-weight: bold;
+
+}
+
+.item_details p:nth-child(3) {
+
+    font-weight: bold;
+
+}
+
+.item_review p:first-child {
+    background-color: green;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 0.1rem;
+    border-radius: 5px
+}
+
+.item_review p:nth-child(2),
+p:nth-child(3) {
+    color: grey;
+    font-weight: bold;
+
+}
+
+.item_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links button {
+
+    text-decoration: none;
+    margin: 0.5rem 1rem;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: black;
+    padding: 0.2rem;
+    box-shadow: 0px 0px 4rem white;
+}
+
+.links button:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: grey;
+    width: 100%;
+
+
+}

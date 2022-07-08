@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-gap: 5%;
+        }
+
+        img {
+            width: 10rem;
+            height: 10rem;
+        }
+
+        #container div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button><a href="pens_cart.html">VISIT CART</a></button>
+    <div id="container"></div>
+    
+
+
+    <script>
+        const pens_object = [{
+                name: "Reynolds",
+                price: 5,
+                image: "https://www.bigbasket.com/media/uploads/p/l/40126497_2-reynolds-gel-pen-jiffy-blue.jpg",
+            },
+            {
+                name: "Parker",
+                price: 10,
+                image: "https://m.media-amazon.com/images/I/51vVS1S2qGL._SL1280_.jpg",
+            },
+            {
+                name: "Cross",
+                price: 15,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLXS_MtzvYCLcavvoi0w5RL2biQ_d2JjEqvA&usqp=CAU",
+            },
+            {
+                name: "Waterman",
+                price: 20,
+                image: "https://5.imimg.com/data5/IH/CO/MY-4390697/waterman-rollerball-pens-500x500.jpg",
+            },
+            {
+                name: "Sheaffe",
+                price: 25,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4dn8krkRXQwZGij1wJq9l_nzgSzfny3nJQ&usqp=CAU",
+            },
+            {
+                name: "Montblac",
+                price: 35,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9xcaJeZQrRIzcRu5k_eibMPa3h7A2F1c7VA&usqp=CAU",
+            },
+            {
+                name: "Cello",
+                price: 35,
+                image: "https://rukminim1.flixcart.com/image/416/416/jhwazrk0/pen/f/x/z/cello-c-004-original-imaf5jx7jhexv3w8.jpeg?q=70",
+            },
+            {
+                name: "Finegrip",
+                price: 35,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRlaNXHEQzojjT4mnLuYmF7KcaR_pftFTKNA&usqp=CAU",
+            },
+
+
+        ]
+
+
+        let pens_json = JSON.stringify(pens_object);
+        localStorage.setItem("myPens", pens_json);
+
+        let mPens_json = localStorage.getItem("myPens");
+
+
+        let mPens_object = JSON.parse(mPens_json);
+        console.log(mPens_object);
+        var count = 0;
+
+        const cart = [];
+
+        function add_product() {
+
+
+            var parent = document.getElementById("container");
+
+            mPens_object.forEach(function (product) {
+                count++;
+
+                let div = document.createElement("div");
+
+                var name = document.createElement("p");
+                name.textContent = product.name;
+                name.setAttribute("class", "name")
+                var price = document.createElement("p");
+                price.setAttribute("id", "price")
+                price.textContent = product.price;
+                let image = document.createElement("img");
+                image.src = product.image;
+                var btn = document.createElement("button");
+                btn.setAttribute("id", count);
+                btn.textContent = "Add to Cart";
+                btn.onclick = function () {
+                    Add_Cart(product);
+                }
+
+                div.append(image, name, price, btn);
+
+                parent.append(div);
+            })
+        }
+
+
+        if (localStorage.getItem("cart") === null) {
+            localStorage.setItem("cart", JSON.stringify([]));
+        }
+
+
+        function Add_Cart(p) {
+            let cart_data = JSON.parse(localStorage.getItem("cart"));
+
+            for(let i=0;i<cart_data.length;i++) {
+                if(cart_data[i].name===p.name){
+                    alert("Item is already in cart");
+                
+                }
+            }
+
+
+            console.log(cart_data);
+            console.log(p);
+
+            cart_data.push(p);
+            localStorage.setItem("cart", JSON.stringify(cart_data));
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        add_product()
+    </script>
+
+</body>
+
+</html>

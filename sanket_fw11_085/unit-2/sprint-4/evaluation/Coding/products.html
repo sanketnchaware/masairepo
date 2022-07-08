@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+    input,button{
+        background-color:greenyellow;
+        padding: 10px;
+        border-radius:10px; 
+    }
+        img {
+            height: 10rem;
+            width: 10rem;
+            border: 1px dashed black;
+            padding: 10px;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 20%);
+            grid-gap: 5%;
+            background-color: aquamarine;
+            height: 100vh;
+        }
+
+        #container div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        #filter {
+            
+            background-color:wheat;
+            padding: 2rem;
+        }
+        h1{
+            text-align: center;
+            background-color:aquamarine;
+            padding: 2rem;
+        }
+
+
+
+    </style>
+
+</head>
+
+
+
+
+<body>
+    <h1>Jewellery Shopping Cart</h1>
+    <div id="container"></div>
+    <div id="filter">
+        <form onsubmit="filter(event)">
+            <label>Filter</label>
+            <br>
+            <select id="slct_brand">
+                <option value="">Select Brand</option>
+                <option value="Cartier">Cartier</option>
+                <option value="David Yurman">David Yurman</option>
+                <option value="Mikimoto">Mikimoto</option>
+                <option value="Bvlgari">Bvlgari</option>
+                <option value="Hermès">Hermès</option>
+                <option value="Chopard">Chopard</option>
+                <option value="Chanel">Chanel</option>
+                <option value="Harry Winston">Harry Winston</option>
+            </select>
+            <select id="slct_range">
+                <option value="">Select range</option>>
+                <option value="2000-4000">2000-4000</option>
+                <option value="4000-6000">4000-6000</option>
+                <option value="6000-8000">6000-8000</option>
+                <option value="8000-10000">8000-10000</option>
+            </select>
+            <input type="submit" value="Search">
+
+        </form>
+    </div>
+
+
+
+    <script>
+        var items_object = [
+
+            {
+                name: "Cartier",
+                price: 2000,
+                image: "https://m.media-amazon.com/images/I/81LMvUUqQ3L._UL1500_.jpg", ////
+
+            },
+
+            {
+                name: "David Yurman",
+                image: "https://5.imimg.com/data5/GV/WF/MY-1107937/indian-wedding-gold-necklace-jewellery-sets-500x500.jpg",
+                price: 3000,
+            },
+
+            {
+                name: "Mikimoto",
+                image: "https://m.media-amazon.com/images/S/aplus-media/vc/bd24f0bb-1f63-44ae-a8fe-42939fd33d1a.__CR0,303,2000,1237_PT0_SX970_V1___.jpg",
+                price: 4000,
+            },
+
+            {
+                name: "Bvlgari",
+                image: "https://c.ndtvimg.com/2020-08/1dp5ha8o_gold-jewellery-unsplash_625x300_15_August_20.jpg",
+                price: 5000,
+            },
+
+            {
+                name: "Harry Winston",
+                image: "https://rukminim1.flixcart.com/image/332/398/klv7ekw0/bangle-bracelet-armlet/s/c/q/free-free-2-azn-bn-105-aazeen-original-imagyw4xpz4ambbz.jpeg?q=50",
+                price: 6000,
+            },
+
+            {
+                name: "Hermès",
+                image: "https://m.media-amazon.com/images/I/71cmvK0oQxL._UY500_.jpg",
+                price: 7000,
+            },
+
+            {
+                name: "Chopard",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmUUmF752mmO7nuS2iXwh7TSleaglAqbRFRw&usqp=CAU",
+                price: 8000,
+            },
+
+            {
+                name: "Chanel",
+                image: "https://images.indianexpress.com/2019/05/jewellery_featured.jpg",
+                price: 9000,
+            },
+
+
+
+        ]
+
+        let items_json = JSON.stringify(items_object);
+        localStorage.setItem("jwell_items", items_json);
+        console.log(items_json);
+
+        let item_arr = JSON.parse(localStorage.getItem("jwell_items"));
+        console.log(item_arr);
+
+        function Jwellery() {
+
+            let data_div = document.getElementById("container");
+            item_arr.forEach(function (product) {
+                let div = document.createElement("div");
+                let p_name = document.createElement("p");
+                p_name.textContent = product.name;
+                let p_price = document.createElement("p");
+                p_price.textContent = product.price;
+                let image = document.createElement("img");
+                image.src = product.image;
+                image.onmouseover = function () {
+                    change_image(event);
+                }
+
+                var btn = document.createElement("button");
+                btn.textContent = "Add to cart";
+                btn.onclick = function () {
+                    Add_cart(product);
+                }
+
+                div.append(image, p_name, p_price, btn);
+                container.append(div);
+
+            });
+        }
+
+
+        Jwellery();
+
+        localStorage.setItem("cart", JSON.stringify([]));
+
+        function change_image(event) {
+            let image = event.target;
+            image.src = "https://www.vaibhavjewellers.com/blog/wp-content/uploads/2019/10/hgdfvad.png"
+
+
+
+        }
+
+        function Add_cart(p) {
+            console.log(p);
+            let cart_data = JSON.parse(localStorage.getItem("cart"));
+            cart_data.push(p);
+            localStorage.setItem("cart", JSON.stringify(cart_data));
+
+        }
+
+
+
+        localStorage.setItem("filter_cart", JSON.stringify([]));
+
+        function filter(e) {
+
+            e.preventDefault();
+            var range = document.getElementById("slct_range").value;
+
+            var brand = document.getElementById("slct_brand").value;
+
+
+
+
+
+
+            var local_data = JSON.parse(localStorage.getItem("jwell_items"));
+
+            let filter_data=JSON.parse(localStorage.getItem("filter_cart"));
+
+            for (let i = 0; i < local_data.length; i++) {
+                if (local_data[i].name == brand && range == "") {
+                    filter_data.push(local_data[i]);
+                }
+            }
+
+
+
+
+            if (range === "2000-4000") {
+
+                for (let i = 0; i < local_data.length; i++) {
+                    if (local_data[i].price >= 2000 && local_data[i].price <= 4000 && local_data[i].name == brand) {
+                        filter_data.push(local_data[i]);
+                    }
+                }
+
+            }
+
+            if (range === "4000-6000") {
+
+                for (let i = 0; i < local_data.length; i++) {
+                    if (local_data[i].price >= 4000 && local_data[i].price <= 6000 && local_data[i].name == brand) {
+                        console.log(local_data[i]);
+                    }
+                }
+
+            }
+
+
+            if (range === "6000-8000") {
+
+                for (let i = 0; i < local_data.length; i++) {
+                    if (local_data[i].price >= 6000 && local_data[i].price <= 8000 && local_data[i].name == brand) {
+                        console.log(local_data[i]);
+                    }
+                }
+
+            }
+            if (range === "8000-10000") {
+
+                for (let i = 0; i < local_data.length; i++) {
+                    if (local_data[i].price >= 8000 && local_data[i].price <= 10000 && local_data[i].name == brand) {
+                        console.log(local_data[i]);
+                    }
+                }
+
+            }
+            
+            localStorage.setItem("filter_cart",JSON.stringify(filter_data));
+
+
+
+           
+        }
+    </script>
+</body>
+
+</html>

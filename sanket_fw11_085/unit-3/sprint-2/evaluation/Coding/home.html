@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | News</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<script type="module">
+    import sideBar from "./components/sideBar.js";
+    import Latest from "./scripts/scripts.js"
+    document.body.innerHTML= sideBar;
+   
+    Latest()
+
+
+
+
+    let btn=document.getElementById("S_btn");
+    addEventListener("click",getInput)
+
+    function getInput(){
+        let inp=document.getElementById("Intput").value;
+        Search(inp)
+    }
+
+
+  async  function Search(l){
+        let res=await fetch(`   https://newsapi.org/v2/everything?q=${l}&apiKey=fb9abe48a528423db59fa3ebe3fabdfb`);
+        let data=await res.json();
+        console.log('data:', data.articles)
+        
+        localStorage.setItem("SearchNews",JSON.stringify(data.articles));
+
+        
+        window.location.href="search.html"
+
+
+    }
+
+
+    
+
+
+  
+   
+    
+
+
+   
+   
+ 
+    
+
+
+
+
+
+
+
+
+</script>

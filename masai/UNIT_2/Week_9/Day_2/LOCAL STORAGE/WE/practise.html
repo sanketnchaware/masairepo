@@ -1,0 +1,29 @@
+<body>
+
+    <form onsubmit="submitForm(event)" action="">
+        <input id="name" type="text">
+        <input id="rating" type="number">
+        <input id="submit" type="submit">
+    </form>
+
+    <script>
+        var product_Arr = [];
+
+        function submitForm(e) {
+            e.preventDefault();
+            console.log("submitted form");
+
+            const movie_object = {
+                name: document.getElementById('name').value,
+                rating: document.getElementById('rating').value
+            }
+            product_Arr.push(movie_object);
+            var product_json = JSON.stringify(product_Arr);
+            localStorage.setItem("prod", product_json);
+
+
+        }
+    </script>
+</body>
+
+</html>

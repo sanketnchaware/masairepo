@@ -1,0 +1,373 @@
+
+hp@Sankyaaaaa07 MINGW64 ~
+$ mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName
+=mongodb
+Implicit session: session { "id" : UUID("be84a72f-a2e6-420e-b10e-755915f383bb")
+}
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been d
+eprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-09-16T15:56:33.935+05:30: Access control is not enabled for the dat
+abase. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then re
+ceive and display
+        metrics about your deployment (disk utilization, CPU, operation statisti
+cs, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique
+ URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to m
+ake product
+        improvements and to suggest MongoDB products and deployment options to y
+ou.
+
+        To enable free monitoring, run the following command: db.enableFreeMonit
+oring()
+        To permanently disable this reminder, run the following command: db.disa
+bleFreeMonitoring()
+---
+> use assignment
+switched to db assignment
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use assignments
+switched to db assignments
+> db.createCollection("users")
+{ "ok" : 1 }
+> show collections
+users
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc7"),
+        "first_name" : "Britney",
+        "last_name" : "Hargrave",
+        "email" : "bhargrave0@si.edu",
+        "gender" : "Bigender",
+        "ip_address" : "50.226.167.165",
+        "age" : 1
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc8"),
+        "first_name" : "Lauree",
+        "last_name" : "Ledwitch",
+        "email" : "lledwitch1@xinhuanet.com",
+        "gender" : "Non-binary",
+        "ip_address" : "45.7.234.100",
+        "age" : 2
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc9"),
+        "first_name" : "Salvidor",
+        "last_name" : "Jenk",
+        "email" : "sjenk2@vistaprint.com",
+        "gender" : "Female",
+        "ip_address" : "168.22.29.207",
+        "age" : 3
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bca"),
+        "first_name" : "Gasper",
+        "last_name" : "Card",
+        "email" : "gcard3@google.de",
+        "gender" : "Polygender",
+        "ip_address" : "222.123.129.247",
+        "age" : 4
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcb"),
+        "first_name" : "Leta",
+        "last_name" : "Wyant",
+        "email" : "lwyant4@reverbnation.com",
+        "gender" : "Non-binary",
+        "ip_address" : "148.129.208.147",
+        "age" : 5
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcc"),
+        "first_name" : "Nichole",
+        "last_name" : "Cayley",
+        "email" : "ncayley5@myspace.com",
+        "gender" : "Non-binary",
+        "ip_address" : "100.255.111.135",
+        "age" : 6
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcd"),
+        "first_name" : "Giuseppe",
+        "last_name" : "Largent",
+        "email" : "glargent6@thetimes.co.uk",
+        "gender" : "Agender",
+        "ip_address" : "187.58.1.198",
+        "age" : 7
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bce"),
+        "first_name" : "Rouvin",
+        "last_name" : "Crosse",
+        "email" : "rcrosse7@cnet.com",
+        "gender" : "Non-binary",
+        "ip_address" : "67.20.3.22",
+        "age" : 8
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcf"),
+        "first_name" : "Christos",
+        "last_name" : "Sabathe",
+        "email" : "csabathe8@hud.gov",
+        "gender" : "Polygender",
+        "ip_address" : "63.128.224.180",
+        "age" : 9
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bd0"),
+        "first_name" : "Katee",
+        "last_name" : "Northin",
+        "email" : "knorthin9@ezinearticles.com",
+        "gender" : "Non-binary",
+        "ip_address" : "51.240.127.10",
+        "age" : 10
+}
+> db.users.findOne({"_id" : ObjectId("614397ea800f7f0ddb339bd0")})
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bd0"),
+        "first_name" : "Katee",
+        "last_name" : "Northin",
+        "email" : "knorthin9@ezinearticles.com",
+        "gender" : "Non-binary",
+        "ip_address" : "51.240.127.10",
+        "age" : 10
+}
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc7"),
+        "first_name" : "Britney",
+        "last_name" : "Hargrave",
+        "email" : "bhargrave0@si.edu",
+        "gender" : "Bigender",
+        "ip_address" : "50.226.167.165",
+        "age" : 1
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc8"),
+        "first_name" : "Lauree",
+        "last_name" : "Ledwitch",
+        "email" : "lledwitch1@xinhuanet.com",
+        "gender" : "Non-binary",
+        "ip_address" : "45.7.234.100",
+        "age" : 2
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc9"),
+        "first_name" : "Salvidor",
+        "last_name" : "Jenk",
+        "email" : "sjenk2@vistaprint.com",
+        "gender" : "Female",
+        "ip_address" : "168.22.29.207",
+        "age" : 3
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bca"),
+        "first_name" : "Gasper",
+        "last_name" : "Card",
+        "email" : "gcard3@google.de",
+        "gender" : "Polygender",
+        "ip_address" : "222.123.129.247",
+        "age" : 4
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcb"),
+        "first_name" : "Leta",
+        "last_name" : "Wyant",
+        "email" : "lwyant4@reverbnation.com",
+        "gender" : "Non-binary",
+        "ip_address" : "148.129.208.147",
+        "age" : 5
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcc"),
+        "first_name" : "Nichole",
+        "last_name" : "Cayley",
+        "email" : "ncayley5@myspace.com",
+        "gender" : "Non-binary",
+        "ip_address" : "100.255.111.135",
+        "age" : 6
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcd"),
+        "first_name" : "Giuseppe",
+        "last_name" : "Largent",
+        "email" : "glargent6@thetimes.co.uk",
+        "gender" : "Agender",
+        "ip_address" : "187.58.1.198",
+        "age" : 7
+}
+{
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcf"),
+        "first_name" : "Christos",
+        "last_name" : "Sabathe",
+        "email" : "csabathe8@hud.gov",
+        "gender" : "Polygender",
+        "ip_address" : "63.128.224.180",
+        "age" : 9
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bd0"),
+        "first_name" : "Katee",
+        "last_name" : "Northin",
+        "email" : "knorthin9@ezinearticles.com",
+        "gender" : "Non-binary",
+        "ip_address" : "51.240.127.10",
+  db.users.find().pretty()
+{ db.users.update({"_id" : ObjectId("614397ea800f7f0ddb339bd0")},{$set:{"first_name"
+        "_id" : ObjectId("614397ea800f7f0ddb339bc7"),db339bd0")},{$set:{"first_name
+        "first_name" : "Britney",
+        "last_name" : "Hargrave",
+        "email" : "bhargrave0@si.edu",
+        "gender" : "Bigender",
+        "ip_address" : "50.226.167.165",
+        "age" : 1
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc8"),
+        "first_name" : "Lauree",
+        "last_name" : "Ledwitch",
+        "email" : "lledwitch1@xinhuanet.com",
+        "gender" : "Non-binary",
+        "ip_address" : "45.7.234.100",
+        "age" : 2
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc9"),
+        "first_name" : "Salvidor",
+        "last_name" : "Jenk",
+        "email" : "sjenk2@vistaprint.com",
+        "gender" : "Female",
+        "ip_address" : "168.22.29.207",
+        "age" : 3
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bca"),
+        "first_name" : "Gasper",
+        "last_name" : "Card",
+        "email" : "gcard3@google.de",
+        "gender" : "Polygender",
+        "ip_address" : "222.123.129.247",
+        "age" : 4
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcb"),
+        "first_name" : "Leta",
+        "last_name" : "Wyant",
+        "email" : "lwyant4@reverbnation.com",
+        "gender" : "Non-binary",
+        "ip_address" : "148.129.208.147",
+        "age" : 5
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcc"),
+        "first_name" : "Nichole",
+        "last_name" : "Cayley",
+        "email" : "ncayley5@myspace.com",
+        "gender" : "Non-binary",
+        "ip_address" : "100.255.111.135",
+        "age" : 6
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcd"),
+        "first_name" : "Giuseppe",
+        "last_name" : "Largent",
+        "email" : "glargent6@thetimes.co.uk",
+        "gender" : "Agender",
+        "ip_address" : "187.58.1.198",
+        "age" : 7
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bce"),
+        "first_name" : "Rouvin",
+        "last_name" : "Crosse",
+        "email" : "rcrosse7@cnet.com",
+        "gender" : "Non-binary",
+        "ip_address" : "67.20.3.22",
+        "age" : 8
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bcf"),
+        "first_name" : "Christos",
+        "last_name" : "Sabathe",
+        "email" : "csabathe8@hud.gov",
+        "gender" : "Polygender",
+        "ip_address" : "63.128.224.180",
+        "age" : 9
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bd0"),
+        "first_name" : "Katee",
+        "last_name" : "Northin",
+        "email" : "knorthin9@ezinearticles.com",
+        "gender" : "Non-binary",
+        "ip_address" : "51.240.127.10",
+        "age" : 10
+}
+> db.users.update({        "_id" : ObjectId("614397ea800f7f0ddb339bd0")},{"first_name":"Sanket"}})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:94
+> db.users.update({        "_id" : ObjectId("614397ea800f7f0ddb339bd0")},{"first_name":"Sanket"}}})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:94
+> db.users.update({        "_id" : ObjectId("614397ea800f7f0ddb339bd0")},{"first_name":"Sanket"}})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:94
+> db.users.update({        "_id" : ObjectId("614397ea800f7f0ddb339bd0")},{$set:{"first_name":"Sanket"}}
+})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:101
+> db.users.update({ "_id" : ObjectId("614397ea800f7f0ddb339bd0")},{{$set:{"first_name":"sanket"}}})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:65
+> db.users.update({ "_id" : ObjectId("614397ea800f7f0ddb339bd0")},{{$set:{"first_name":"sanket"}})
+...
+...
+> db.users.update({ "_id" : ObjectId("614397ea800f7f0ddb339bd0")},{$set:{"first_name":"sanket"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc7"),
+        "first_name" : "Britney",
+        "last_name" : "Hargrave",
+        "email" : "bhargrave0@si.edu",
+        "gender" : "Bigender",
+        "ip_address" : "50.226.167.165",
+        "age" : 1
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc8"),
+        "first_name" : "Lauree",
+        "last_name" : "Ledwitch",
+        "email" : "lledwitch1@xinhuanet.com",
+        "gender" : "Non-binary",
+        "ip_address" : "45.7.234.100",
+        "age" : 2
+}
+{
+        "_id" : ObjectId("614397ea800f7f0ddb339bc9"),
+        "first_name" : "Salvidor",
+        "last_name" : "Jenk",
+        "email" : "sjenk2@vistaprint.com",
+        "gender" : "Female",
+ 

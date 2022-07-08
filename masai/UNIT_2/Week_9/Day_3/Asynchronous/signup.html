@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: flex-end;
+            border: 1px solid red;
+            background-color: tomato;
+
+
+        }
+
+        #navbar div a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #navbar div {
+            margin: 0.5rem 2rem;
+            background-color: black;
+            border-radius: 8px;
+            padding: 0.5rem;
+
+        }
+
+        #form_data {
+            width: 25%;
+            margin: 3rem auto;
+
+
+
+        }
+
+        #form_data input,
+        button {
+            width: 100%;
+            margin-bottom: 1rem;
+            height: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <div><a href="home.html">Home</a></div>
+            <div><a href="login.html">Login</a></div>
+            <div><a href="signup.html">Sign up</a></div>
+        </nav>
+    </header>
+
+    <section id="form_data">
+        <form onsubmit="sbmit(event)" action="">
+            <label for="">Name</label>
+            <input id="nam" type="text">
+
+            <label for="">Contact No.</label>
+            <input id="cell" type="number">
+
+            <label for="">Email</label>
+            <input id="mail" type="email">
+
+            <label for="password">Enter Password</label>
+            <input id="pass" type="password">
+
+            <input  value="submit" type="Submit">
+        </form>
+    </section>
+    <script>
+       
+       if(localStorage.getItem("details")===null) {
+        localStorage.setItem("details",JSON.stringify([]));
+       }
+
+        function sbmit(event) {
+            event.preventDefault();
+            var obj={};
+            var nam = document.getElementById("nam").value;
+            var cell = document.getElementById("cell").value;
+            var mail = document.getElementById("mail").value;
+            var pass = document.getElementById("pass").value;
+            console.log(nam,cell,mail,pass);
+            var data_arr=JSON.parse(localStorage.getItem("details"));
+            console.log(data_arr);
+            obj.name=nam;
+            obj.number=cell;
+            obj.email=mail;
+            obj.password=pass;
+            data_arr.push(obj);
+            localStorage.setItem("details",JSON.stringify(data_arr));
+            
+
+            if(nam=="" || cell=="" || mail=="" || pass==""  ){
+                alert("Please provide all the details.");
+                return;
+            }
+
+            if(nam!="" || cell!="" || mail!="" || pass!=""  ){
+                alert("Sign Up Successfull"+ " " +nam);
+
+            }
+            
+            window.location.href="login.html";
+     
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise</title>
+</head>
+
+<body>
+
+    <h1>Covid Vaccination Alert System</h1>
+
+    <input type="text" id="name" placeholders="Enter Name">
+    <button onclick="register()"> Register</button>
+
+
+    <script>
+        var queue = ["sanket", "rani", "sagar", "suraj"]
+
+        function register() {
+            var person = document.getElementById("name").value;
+            queue.push(person);
+
+            let message = `${person} your registration is successful`;
+            alert(message);
+
+
+            let promise = new Promise(function (resolve, reject) {
+
+
+                setInterval(function () {
+                    if (queue[0] === person) {
+                        resolve("success");
+                    }
+                }, 5000); //Keeps checking wheather our promiseis fullfilled or not//
+
+            });
+
+            console.log(promise);
+
+            promise.then(function (res) {
+                console.log(res);
+            }) //promise has been resolved//
+
+        }
+        function startVaccination() {
+            queue.shift();
+            if (queue.length == 0) {
+                clearInterval(interval);
+            }
+
+            console.log(queue);
+        }
+        interval = setInterval(startVaccination, 3000);
+    </script>
+
+</body>
+
+</html>

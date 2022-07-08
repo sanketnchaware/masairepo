@@ -1,0 +1,146 @@
+body {
+    background-image: url("form.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 25px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: cursive;
+    text-shadow: 2px 3px 5px rgb(81, 202, 202);
+}
+
+h1 {
+    font-size: 4rem;
+    color: darkblue;
+    text-shadow: 2px 3px 2px black;
+    margin: 0;
+}
+
+form {
+    margin: 75px auto;
+    width: 50%;
+    border: 1px solid lightskyblue;
+    box-shadow: 1px 2px 30px rgb(119, 136, 153);
+    padding: 50px;
+    background: rgba(87, 185, 209, 0.836);
+}
+
+form:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+    background-color: rgba(122, 189, 228, 0.596);
+    border-radius: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 5vh;
+    margin: 5px 0 10px;
+    border: 1px groove skyblue;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+select {
+    height: 5vh;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px groove skyblue;
+
+}
+
+label {
+    font-size: 1.6rem;
+    margin: 20px 0;
+    font-family: cursive;
+    color: black;
+    font-weight: 700;
+    text-shadow: 2px 3px 2px rgba(81, 202, 202, 0.397);
+}
+
+button {
+    font-size: 1.6rem;
+    margin-left: 150px;
+    margin-top: 20px;
+
+    color: white;
+    border-radius: 10px;
+    border: 2px solid lightblue;
+    background-color: rgb(25, 130, 216);
+    padding: 15px;
+    width: 50%;
+    font-family: cursive;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(53, 173, 228);
+    transform: scale(1.1);
+
+}
+
+@media all and (max-width:320px) {
+    form{
+        padding: 10px;
+        width: 100%;
+        margin-top: 0;
+    }
+    button {
+        margin: auto;
+        width: 100%;
+        font-size: 1rem;
+        padding: 5px;
+    }
+    label{
+        font-size: 1rem;
+
+    }
+    h1{
+        font-size: 1.5rem;
+        margin: 20px;
+    }
+    h2{
+        font-size: 1rem;
+        margin: 20px;
+    }
+}
+    @media all and (min-width:321px) and (max-width:768px){
+
+        form{
+            padding: 10px;
+            width: 60%;
+        }
+        button {
+            margin: auto;
+            width: 100%;
+            font-size: 1.5rem;
+            padding: 5px;
+        }
+        label{
+            font-size: 1rem;
+    
+        }
+        h1{
+            font-size: 2.5rem;
+            margin: 20px;
+        }
+        h2{
+            font-size: 1.5rem;
+            margin: 20px;
+        }
+    
+
+
+}

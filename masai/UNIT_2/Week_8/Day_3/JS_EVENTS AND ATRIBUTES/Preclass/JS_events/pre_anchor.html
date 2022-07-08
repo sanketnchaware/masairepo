@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Anchor</title>
+</head>
+<body>
+    <a href="https://www.masaischool.com/" id="link">Masai School</a>
+
+    <script>
+        var link=document.getElementById('link');
+        function stopClick(event){
+            event.preventDefault();
+        }
+        link.addEventListener('click',stopClick);
+        //Stopping from opening the link//
+    </script>
+</body>
+</html>

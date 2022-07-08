@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+<style>
+    h1{
+        border: 1px solid black;
+        display: inline-block;
+        font-size:7rem;
+        font-weight: bolder;
+
+        padding:10px;
+    }
+</style>
+</head>
+
+<body>
+
+    <button>Throw Dice</button>
+    <br>
+    <h1 id="display"></h1>
+
+
+    <script>
+        function random() {
+            var n= Math.floor(Math.random() * 6) + 1;
+            
+            var display = document.getElementById('display');
+            display.textContent =n;
+            if(n==6){
+                display.style.color="green";
+
+            }
+            else if(n==1){
+                display.style.color="red";
+
+            }
+            else{
+                display.style.color="darkblue";
+
+            }
+        
+        }
+
+
+        
+
+        
+
+
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', random);
+    </script>
+</body>
+
+</html>
+
+<!-- 
+Dice Pending
+Problem
+Create a DICE. On clicking ‘throw dice’ button, the user should be able to see a random number between 1 to 6. If the number is 6, show the number in 'green’ color, if the number is ‘1’ show the number in ‘red’ color. For the rest of the numbers, keep a color of your choice. -->

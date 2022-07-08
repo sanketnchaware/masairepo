@@ -1,0 +1,63 @@
+* {
+    border: 1px solid red;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: white
+}
+
+.navbar a {
+    float: left;
+
+    text-align: center;
+    padding: 5px 8px;
+    text-decoration: none;
+    color: grey;
+
+}
+
+.navbar .d {
+    float: left;
+    overflow: hidden;
+
+}
+
+.d .d-btn {
+    border: none;
+    outline: none;
+
+    background-color: inherit;
+
+}
+
+.navbar a:hover,
+.d .d-btn:hover {
+    background-color: yellow;
+
+}
+
+.d-content {
+    display: none;
+    position: absolute;
+
+    width: 80%;
+
+    left: 84px;
+
+}
+
+.d:hover .d-content {
+    display: block;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: purple;
+    height: 250px;
+
+}

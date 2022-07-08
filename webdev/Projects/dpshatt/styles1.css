@@ -1,0 +1,62 @@
+/* Homepage*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: lightcyan;
+    
+}
+
+
+.content {
+    padding: 100px;
+    font-size: 2rem;
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+
+}
+
+.content p {
+    border-bottom: 5px dotted lightblue;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+
+span {
+    font-size: 5rem;
+}
+
+hr {
+    margin: 50px 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: relative;
+    text-align: center;
+
+
+}
+
+footer p {
+    background-color: black;
+    line-height: 50px;
+    width: 80%;
+    font-size: 2rem;
+    font-family: 'Bitter', serif;
+    color: lightslategray;
+
+
+}
+
+
+
